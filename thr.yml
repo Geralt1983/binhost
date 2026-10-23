@@ -1,0 +1,3864 @@
+detectors:
+- name: basic_auth
+  keywords:
+  - Basic
+  - Authorization
+  regex:
+    pattern: (?i)Basic\s+([A-Za-z0-9+/]{12,}={0,2})
+  entropy: 2.5
+- name: abuseipdb
+  keywords:
+  - ABUSEIPDB_API_KEY
+  regex:
+    pattern: (?i)ABUSEIPDB_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{48,200})
+  entropy: 3.5
+- name: accuweather
+  keywords:
+  - ACCUWEATHER_API_KEY
+  regex:
+    pattern: (?i)ACCUWEATHER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: adzuna
+  keywords:
+  - ADZUNA_API_KEY
+  regex:
+    pattern: (?i)ADZUNA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: alienvault
+  keywords:
+  - ALIENVAULT_API_KEY
+  regex:
+    pattern: (?i)ALIENVAULT_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: alpha_vantage
+  keywords:
+  - ALPHA_VANTAGE_API_KEY
+  regex:
+    pattern: (?i)ALPHA_VANTAGE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,40})
+  entropy: 3.5
+- name: anthropic
+  keywords:
+  - sk-ant-api
+  regex:
+    pattern: (?i)sk-ant-api03-[A-Za-z0-9\-_]{86}
+  entropy: 3.5
+- name: apify
+  keywords:
+  - APIFY_API_KEY
+  regex:
+    pattern: (?i)APIFY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: apilayer
+  keywords:
+  - APILAYER_API_KEY
+  regex:
+    pattern: (?i)APILAYER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: apilayer_exchange
+  keywords:
+  - APILAYER_EXCHANGE_API_KEY
+  regex:
+    pattern: (?i)APILAYER_EXCHANGE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: arize_phoenix
+  keywords:
+  - ARIZE_PHOENIX_API_KEY
+  regex:
+    pattern: (?i)ARIZE_PHOENIX_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,47})
+  entropy: 3.5
+- name: arm
+  keywords:
+  - ARM_CLIENT_ID
+  regex:
+    pattern: (?i)ARM_CLIENT_ID[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: arm_client
+  keywords:
+  - ARM_CLIENT_SECRET
+  regex:
+    pattern: (?i)ARM_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: arm_tenant_id
+  keywords:
+  - ARM_TENANT_ID
+  regex:
+    pattern: (?i)ARM_TENANT_ID[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: aruba
+  keywords:
+  - ARUBA_API_KEY
+  regex:
+    pattern: (?i)ARUBA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: auth0
+  keywords:
+  - AUTH0_API_KEY
+  regex:
+    pattern: (?i)AUTH0_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: aws
+  keywords:
+  - AWS_API_KEY
+  regex:
+    pattern: (?i)AWS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: aws_access
+  keywords:
+  - AWS_ACCESS_KEY
+  regex:
+    pattern: (?i)AWS_ACCESS_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,50})
+  entropy: 3.5
+- name: aws_access_key_id
+  keywords:
+  - AWS_ACCESS_KEY_ID
+  regex:
+    pattern: (?i)AWS_ACCESS_KEY_ID[\s'"=:]+([A-Za-z0-9_\-]{15,50})
+  entropy: 3.5
+- name: aws_access_region
+  keywords:
+  - AWS_ACCESS_REGION
+  regex:
+    pattern: (?i)AWS_ACCESS_REGION[\s'"=:]+([A-Za-z0-9_\-]{15,35})
+  entropy: 3.5
+- name: aws_public
+  keywords:
+  - AWS_PUBLIC_KEY
+  regex:
+    pattern: (?i)AWS_PUBLIC_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,50})
+  entropy: 3.5
+- name: aws_secret
+  keywords:
+  - AWS_SECRET_KEY
+  regex:
+    pattern: (?i)AWS_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{23,97})
+  entropy: 3.5
+- name: aws_secret_access
+  keywords:
+  - AWS_SECRET_ACCESS_KEY
+  regex:
+    pattern: (?i)AWS_SECRET_ACCESS_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: azure
+  keywords:
+  - AZURE_CLIENT_ID
+  regex:
+    pattern: (?i)AZURE_CLIENT_ID[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: azure_client
+  keywords:
+  - AZURE_CLIENT_SECRET
+  regex:
+    pattern: (?i)AZURE_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: azure_devops
+  keywords:
+  - AZURE_DEVOPS_API_KEY
+  regex:
+    pattern: (?i)AZURE_DEVOPS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: azure_general
+  keywords:
+  - AZURE_GENERAL_API_KEY
+  regex:
+    pattern: (?i)AZURE_GENERAL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: azure_openai
+  keywords:
+  - AZURE_OPENAI_API_KEY
+  regex:
+    pattern: (?i)AZURE_OPENAI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{32,145})
+  entropy: 3.5
+- name: azure_openai_api_version
+  keywords:
+  - AZURE_OPENAI_API_VERSION
+  regex:
+    pattern: (?i)AZURE_OPENAI_API_VERSION[\s'"=:]+([A-Za-z0-9_\-]{15,25})
+  entropy: 3.5
+- name: azure_sas
+  keywords:
+  - AZURE_SAS_TOKEN
+  regex:
+    pattern: (?i)AZURE_SAS_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: azure_search
+  keywords:
+  - AZURE_SEARCH_API_KEY
+  regex:
+    pattern: (?i)AZURE_SEARCH_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{31,130})
+  entropy: 3.5
+- name: azure_storage_connection_string
+  keywords:
+  - AZURE_STORAGE_CONNECTION_STRING_API_KEY
+  regex:
+    pattern: (?i)AZURE_STORAGE_CONNECTION_STRING_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: azure_tenant_id
+  keywords:
+  - AZURE_TENANT_ID
+  regex:
+    pattern: (?i)AZURE_TENANT_ID[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: binance
+  keywords:
+  - BINANCE_API_KEY
+  regex:
+    pattern: (?i)BINANCE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{64})
+  entropy: 3.5
+- name: binance_secret
+  keywords:
+  - BINANCE_SECRET_KEY
+  regex:
+    pattern: (?i)BINANCE_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{64})
+  entropy: 3.5
+- name: bing
+  keywords:
+  - BING_API_KEY
+  regex:
+    pattern: (?i)BING_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{26,110})
+  entropy: 3.5
+- name: bitbucket
+  keywords:
+  - BITBUCKET_API_KEY
+  regex:
+    pattern: (?i)BITBUCKET_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: bitbucket_org
+  keywords:
+  - BITBUCKET_ORG_API_KEY
+  regex:
+    pattern: (?i)BITBUCKET_ORG_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: box
+  keywords:
+  - BOX_API_KEY
+  regex:
+    pattern: (?i)BOX_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: brave
+  keywords:
+  - BRAVE_API_KEY
+  regex:
+    pattern: (?i)BRAVE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{18,77})
+  entropy: 3.5
+- name: browserbase
+  keywords:
+  - BROWSERBASE_API_KEY
+  regex:
+    pattern: (?i)BROWSERBASE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{21,87})
+  entropy: 3.5
+- name: browserless
+  keywords:
+  - BROWSERLESS_API_KEY
+  regex:
+    pattern: (?i)BROWSERLESS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{29,122})
+  entropy: 3.5
+- name: bybit
+  keywords:
+  - BYBIT_API_KEY
+  regex:
+    pattern: (?i)BYBIT_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{18})
+  entropy: 3.5
+- name: bybit_secret
+  keywords:
+  - BYBIT_SECRET_KEY
+  regex:
+    pattern: (?i)BYBIT_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{36})
+  entropy: 3.5
+- name: cartesia
+  keywords:
+  - CARTESIA_API_KEY
+  regex:
+    pattern: (?i)CARTESIA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,70})
+  entropy: 3.5
+- name: cf
+  keywords:
+  - CF_API_KEY
+  regex:
+    pattern: (?i)CF_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: claude
+  keywords:
+  - CLAUDE_API_KEY
+  regex:
+    pattern: (?i)CLAUDE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{64,200})
+  entropy: 3.5
+- name: clearbit
+  keywords:
+  - CLEARBIT_API_KEY
+  regex:
+    pattern: (?i)CLEARBIT_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: clickup
+  keywords:
+  - CLICKUP_API_KEY
+  regex:
+    pattern: (?i)CLICKUP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: client
+  keywords:
+  - CLIENT_SECRET
+  regex:
+    pattern: (?i)CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{15,60})
+  entropy: 3.5
+- name: cloudflare
+  keywords:
+  - CLOUDFLARE_TOKEN
+  regex:
+    pattern: (?i)CLOUDFLARE_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: cloudflare_account_id
+  keywords:
+  - CLOUDFLARE_ACCOUNT_ID
+  regex:
+    pattern: (?i)CLOUDFLARE_ACCOUNT_ID[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: cloudflare_api
+  keywords:
+  - CLOUDFLARE_API_TOKEN
+  regex:
+    pattern: (?i)CLOUDFLARE_API_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: cloudflare_zone
+  keywords:
+  - CLOUDFLARE_ZONE_API_KEY
+  regex:
+    pattern: (?i)CLOUDFLARE_ZONE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: cloudinary
+  keywords:
+  - CLOUDINARY_API_KEY
+  regex:
+    pattern: (?i)CLOUDINARY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,37})
+  entropy: 3.5
+- name: cloudinary_api
+  keywords:
+  - CLOUDINARY_API_SECRET
+  regex:
+    pattern: (?i)CLOUDINARY_API_SECRET[\s'"=:]+([A-Za-z0-9_\-]{16,67})
+  entropy: 3.5
+- name: cloudinary_api_key_69
+  keywords:
+  - CLOUDINARY_API_KEY_69_API_KEY
+  regex:
+    pattern: (?i)CLOUDINARY_API_KEY_69_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: cohere
+  keywords:
+  - COHERE_API_KEY
+  regex:
+    pattern: (?i)COHERE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{23,97})
+  entropy: 3.5
+- name: composio
+  keywords:
+  - COMPOSIO_API_KEY
+  regex:
+    pattern: (?i)COMPOSIO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,57})
+  entropy: 3.5
+- name: content_bot
+  keywords:
+  - CONTENT_BOT_TOKEN
+  regex:
+    pattern: (?i)CONTENT_BOT_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{55,200})
+  entropy: 3.5
+- name: cryptr
+  keywords:
+  - CRYPTR_SECRET
+  regex:
+    pattern: (?i)CRYPTR_SECRET[\s'"=:]+([A-Za-z0-9_\-]{15,55})
+  entropy: 3.5
+- name: cursor
+  keywords:
+  - CURSOR_API_KEY
+  regex:
+    pattern: (?i)CURSOR_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{40,170})
+  entropy: 3.5
+- name: daily
+  keywords:
+  - DAILY_API_KEY
+  regex:
+    pattern: (?i)DAILY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{38,160})
+  entropy: 3.5
+- name: dataimpulse
+  keywords:
+  - DATAIMPULSE_API_KEY
+  regex:
+    pattern: (?i)DATAIMPULSE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: deepai
+  keywords:
+  - DEEPAI_API_KEY
+  regex:
+    pattern: (?i)DEEPAI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: deepgram
+  keywords:
+  - DEEPGRAM_API_KEY
+  regex:
+    pattern: (?i)DEEPGRAM_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{23,97})
+  entropy: 3.5
+- name: deepseek
+  keywords:
+  - DEEPSEEK_API_KEY
+  regex:
+    pattern: (?i)DEEPSEEK_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,82})
+  entropy: 3.5
+- name: detectify
+  keywords:
+  - DETECTIFY_API_KEY
+  regex:
+    pattern: (?i)DETECTIFY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: digitalocean
+  keywords:
+  - DIGITALOCEAN_API_KEY
+  regex:
+    pattern: (?i)DIGITALOCEAN_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: digitalocean_access
+  keywords:
+  - DIGITALOCEAN_ACCESS_TOKEN
+  regex:
+    pattern: (?i)DIGITALOCEAN_ACCESS_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: digitalocean_api
+  keywords:
+  - DIGITALOCEAN_API_TOKEN
+  regex:
+    pattern: (?i)DIGITALOCEAN_API_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{42,177})
+  entropy: 3.5
+- name: discord
+  keywords:
+  - DISCORD_API_KEY
+  regex:
+    pattern: (?i)DISCORD_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: docker_registry_auth
+  keywords:
+  - DOCKER_REGISTRY_AUTH_API_KEY
+  regex:
+    pattern: (?i)DOCKER_REGISTRY_AUTH_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: dockerhub
+  keywords:
+  - DOCKERHUB_API_KEY
+  regex:
+    pattern: (?i)DOCKERHUB_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: dropbox
+  keywords:
+  - DROPBOX_API_KEY
+  regex:
+    pattern: (?i)DROPBOX_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: e2b
+  keywords:
+  - E2B_API_KEY
+  regex:
+    pattern: (?i)E2B_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{26,110})
+  entropy: 3.5
+- name: eleven
+  keywords:
+  - ELEVEN_API_KEY
+  regex:
+    pattern: (?i)ELEVEN_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{33,137})
+  entropy: 3.5
+- name: eleven_labs
+  keywords:
+  - ELEVEN_LABS_API_KEY
+  regex:
+    pattern: (?i)ELEVEN_LABS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,127})
+  entropy: 3.5
+- name: elevenlabs
+  keywords:
+  - ELEVENLABS_API_KEY
+  regex:
+    pattern: (?i)ELEVENLABS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,125})
+  entropy: 3.5
+- name: embedding
+  keywords:
+  - EMBEDDING_API_KEY
+  regex:
+    pattern: (?i)EMBEDDING_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{21,87})
+  entropy: 3.5
+- name: encryption
+  keywords:
+  - ENCRYPTION_KEY
+  regex:
+    pattern: (?i)ENCRYPTION_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,65})
+  entropy: 3.5
+- name: escrow_wallet_private
+  keywords:
+  - ESCROW_WALLET_PRIVATE_KEY
+  regex:
+    pattern: (?i)ESCROW_WALLET_PRIVATE_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,45})
+  entropy: 3.5
+- name: eventbrite
+  keywords:
+  - EVENTBRITE_API_KEY
+  regex:
+    pattern: (?i)EVENTBRITE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: evm
+  keywords:
+  - EVM_API_KEY
+  regex:
+    pattern: (?i)EVM_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: facebook
+  keywords:
+  - FACEBOOK_CLIENT_ID_API_KEY
+  regex:
+    pattern: (?i)FACEBOOK_CLIENT_ID_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: facebook_client
+  keywords:
+  - FACEBOOK_CLIENT_SECRET
+  regex:
+    pattern: (?i)FACEBOOK_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: fal
+  keywords:
+  - FAL_API_KEY
+  regex:
+    pattern: (?i)FAL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: file_io
+  keywords:
+  - FILE_IO_API_KEY
+  regex:
+    pattern: (?i)FILE_IO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: financial_modeling_prep
+  keywords:
+  - FINANCIAL_MODELING_PREP_API_KEY
+  regex:
+    pattern: (?i)FINANCIAL_MODELING_PREP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: firebase
+  keywords:
+  - FIREBASE_API_KEY
+  regex:
+    pattern: (?i)FIREBASE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: firebase_project_id
+  keywords:
+  - FIREBASE_PROJECT_ID
+  regex:
+    pattern: (?i)FIREBASE_PROJECT_ID[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: firecrawl
+  keywords:
+  - FIRECRAWL_API_KEY
+  regex:
+    pattern: (?i)FIRECRAWL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{25,107})
+  entropy: 3.5
+- name: fish_audio
+  keywords:
+  - FISH_AUDIO_API_KEY
+  regex:
+    pattern: (?i)FISH_AUDIO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: fireworks
+  keywords:
+  - FIREWORKS_API_KEY
+  regex:
+    pattern: (?i)FIREWORKS_API_KEY[\s'"=:]+([a-zA-Z0-9_\-]{24,40})
+  entropy: 3.5
+- name: fmp
+  keywords:
+  - FMP_API_KEY
+  regex:
+    pattern: (?i)FMP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: foursquare
+  keywords:
+  - FOURSQUARE_API_KEY
+  regex:
+    pattern: (?i)FOURSQUARE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{28,120})
+  entropy: 3.5
+- name: gemini
+  keywords:
+  - GEMINI_API_KEY
+  regex:
+    pattern: (?i)GEMINI_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{23,97})
+  entropy: 3.5
+- name: gemini_api_key_2
+  keywords:
+  - GEMINI_API_KEY_2
+  regex:
+    pattern: (?i)GEMINI_API_KEY_2[\s'"=:]+([A-Za-z0-9_.\-]{23,97})
+  entropy: 3.5
+- name: genderize
+  keywords:
+  - GENDERIZE_API_KEY
+  regex:
+    pattern: (?i)GENDERIZE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: generic
+  keywords:
+  - GENERIC_API_KEY
+  regex:
+    pattern: (?i)GENERIC_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: getotp
+  keywords:
+  - GETOTP_API_KEY
+  regex:
+    pattern: (?i)GETOTP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: github
+  keywords:
+  - GITHUB_API_KEY
+  regex:
+    pattern: (?i)GITHUB_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{55,200})
+  entropy: 3.5
+- name: github_oauth
+  keywords:
+  - GITHUB_OAUTH_API_KEY
+  regex:
+    pattern: (?i)GITHUB_OAUTH_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: github_oauth_client
+  keywords:
+  - GITHUB_OAUTH_CLIENT_SECRET
+  regex:
+    pattern: (?i)GITHUB_OAUTH_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: github_pat
+  keywords:
+  - github_pat
+  - GITHUB_PAT
+  - github_pat_
+  regex:
+    pattern: (?i)(github_pat_[A-Za-z0-9_]{40,80})
+  entropy: 3.0
+- name: gofile
+  keywords:
+  - GOFILE_API_KEY
+  regex:
+    pattern: (?i)GOFILE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: google
+  keywords:
+  - GOOGLE_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{23,97})
+  entropy: 3.5
+- name: google_ai
+  keywords:
+  - GOOGLE_AI_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_AI_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{23,97})
+  entropy: 3.5
+- name: google_ai_studio
+  keywords:
+  - GOOGLE_AI_STUDIO_KEY
+  regex:
+    pattern: (?i)GOOGLE_AI_STUDIO_KEY[\s'"=:]+([A-Za-z0-9_.\-]{23,97})
+  entropy: 3.5
+- name: google_application_credentials
+  keywords:
+  - GOOGLE_APPLICATION_CREDENTIALS_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_APPLICATION_CREDENTIALS_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{19,80})
+  entropy: 3.5
+- name: google_gen_ai
+  keywords:
+  - GOOGLE_GEN_AI_KEY
+  regex:
+    pattern: (?i)GOOGLE_GEN_AI_KEY[\s'"=:]+([A-Za-z0-9_.\-]{23,97})
+  entropy: 3.5
+- name: google_genai
+  keywords:
+  - GOOGLE_GENAI_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_GENAI_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{23,97})
+  entropy: 3.5
+- name: google_generative_ai
+  keywords:
+  - GOOGLE_GENERATIVE_AI_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_GENERATIVE_AI_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{23,97})
+  entropy: 3.5
+- name: google_maps
+  keywords:
+  - GOOGLE_MAPS_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_MAPS_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{23,97})
+  entropy: 3.5
+- name: google_safe_browsing
+  keywords:
+  - GOOGLE_SAFE_BROWSING_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_SAFE_BROWSING_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{19,80})
+  entropy: 3.5
+- name: google_safebrowsing
+  keywords:
+  - GOOGLE_SAFEBROWSING_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_SAFEBROWSING_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{19,80})
+  entropy: 3.5
+- name: google_search
+  keywords:
+  - GOOGLE_SEARCH_API_KEY
+  - GOOGLE_SEARCH_KEY
+  - GOOGLE_CSE_API_KEY
+  - GOOGLE_CUSTOM_SEARCH_API_KEY
+  - CUSTOM_SEARCH_API_KEY
+  - SEARCH_ENGINE_API_KEY
+  regex:
+    pattern: (?i)(?:GOOGLE_SEARCH_API_KEY|GOOGLE_SEARCH_KEY|GOOGLE_CSE_API_KEY|GOOGLE_CUSTOM_SEARCH_API_KEY|CUSTOM_SEARCH_API_KEY|SEARCH_ENGINE_API_KEY)[\s'"=:]+(AIza[0-9A-Za-z_\-]{35})
+  entropy: 3.0
+- name: google_translate
+  keywords:
+  - GOOGLE_TRANSLATE_API_KEY
+  - GOOGLE_TRANSLATE_KEY
+  - GOOGLETRANSLATE_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_?TRANSLATE(?:_API)?_KEY[\s'"=:]+(AIza[0-9A-Za-z_\-]{35})
+  entropy: 3.5
+- name: google_vertex
+  keywords:
+  - GOOGLE_VERTEX_API_KEY
+  regex:
+    pattern: (?i)GOOGLE_VERTEX_API_KEY[\s'"=:]+([A-Za-z0-9_.\-]{31,132})
+  entropy: 3.5
+- name: groq
+  keywords:
+  - gsk_
+  regex:
+    pattern: (?i)gsk_[A-Za-z0-9]{52}
+  entropy: 3.5
+- name: hcloud
+  keywords:
+  - HCLOUD_TOKEN
+  regex:
+    pattern: (?i)HCLOUD_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: here
+  keywords:
+  - HERE_API_KEY
+  regex:
+    pattern: (?i)HERE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{25,107})
+  entropy: 3.5
+- name: heroku
+  keywords:
+  - HEROKU_API_KEY
+  regex:
+    pattern: (?i)HEROKU_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: heygen
+  keywords:
+  - HEYGEN_API_KEY
+  regex:
+    pattern: (?i)HEYGEN_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{34,145})
+  entropy: 3.5
+- name: hibp
+  keywords:
+  - HIBP_API_KEY
+  regex:
+    pattern: (?i)HIBP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: honcho
+  keywords:
+  - HONCHO_API_KEY
+  regex:
+    pattern: (?i)HONCHO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: host_io
+  keywords:
+  - HOST_IO_API_KEY
+  regex:
+    pattern: (?i)HOST_IO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: hugging
+  keywords:
+  - HUGGING_API_KEY
+  regex:
+    pattern: (?i)HUGGING_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: huggingface
+  keywords:
+  - HUGGINGFACE_TOKEN
+  - HUGGINGFACE_HUB_TOKEN
+  - HF_TOKEN
+  - HF_API_TOKEN
+  regex:
+    pattern: (?i)(?:HF_(?:API_)?TOKEN|HUGGINGFACE_(?:HUB_)?TOKEN)[\s'"=:]+([A-Za-z0-9_\-]{20,100})
+  entropy: 3.5
+- name: huggingface_co
+  keywords:
+  - HUGGINGFACE_CO_API_KEY
+  regex:
+    pattern: (?i)HUGGINGFACE_CO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: huobi
+  keywords:
+  - HUOBI_API_KEY
+  regex:
+    pattern: (?i)HUOBI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,48})
+  entropy: 3.5
+- name: huobi_secret
+  keywords:
+  - HUOBI_SECRET_KEY
+  regex:
+    pattern: (?i)HUOBI_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,48})
+  entropy: 3.5
+- name: ideogram
+  keywords:
+  - IDEOGRAM_API_KEY
+  regex:
+    pattern: (?i)IDEOGRAM_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{51,200})
+  entropy: 3.5
+- name: infura
+  keywords:
+  - INFURA_API_KEY
+  regex:
+    pattern: (?i)INFURA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: instagram
+  keywords:
+  - INSTAGRAM_CLIENT_ID
+  regex:
+    pattern: (?i)INSTAGRAM_CLIENT_ID[\s'"=:]+([A-Za-z0-9_\-]{15,37})
+  entropy: 3.5
+- name: instagram_client
+  keywords:
+  - INSTAGRAM_CLIENT_SECRET
+  regex:
+    pattern: (?i)INSTAGRAM_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: integrated_endpoints
+  keywords:
+  - INTEGRATED_ENDPOINTS_API_KEY
+  regex:
+    pattern: (?i)INTEGRATED_ENDPOINTS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: invicti
+  keywords:
+  - INVICTI_API_KEY
+  regex:
+    pattern: (?i)INVICTI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: ipgeo
+  keywords:
+  - IPGEO_API_KEY
+  regex:
+    pattern: (?i)IPGEO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: ipinfo
+  keywords:
+  - IPINFO_API_KEY
+  regex:
+    pattern: (?i)IPINFO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: iproyal
+  keywords:
+  - IPROYAL_API_KEY
+  regex:
+    pattern: (?i)IPROYAL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: jdbc
+  keywords:
+  - JDBC_API_KEY
+  regex:
+    pattern: (?i)JDBC_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: jooble
+  keywords:
+  - JOOBLE_API_KEY
+  regex:
+    pattern: (?i)JOOBLE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: jwt
+  keywords:
+  - JWT_API_KEY
+  regex:
+    pattern: (?i)JWT_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: jwt_live
+  keywords:
+  - eyJ
+  - JWT
+  - Authorization
+  - Bearer
+  regex:
+    pattern: (?i)(eyJ[A-Za-z0-9_-]{50,}\.[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,})
+  entropy: 3.0
+- name: kling
+  keywords:
+  - KLING_SECRET
+  regex:
+    pattern: (?i)KLING_SECRET[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: kling_access
+  keywords:
+  - KLING_ACCESS_API_KEY
+  regex:
+    pattern: (?i)KLING_ACCESS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: kling_secret
+  keywords:
+  - KLING_SECRET_KEY
+  regex:
+    pattern: (?i)KLING_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: kraken
+  keywords:
+  - KRAKEN_API_KEY
+  regex:
+    pattern: (?i)KRAKEN_API_KEY[\s'"=:]+([A-Za-z0-9_\-\/\+]{56})
+  entropy: 3.5
+- name: kraken_api
+  keywords:
+  - KRAKEN_API_SECRET
+  regex:
+    pattern: (?i)KRAKEN_API_SECRET[\s'"=:]+([A-Za-z0-9_\-\/\+]{88})
+  entropy: 3.5
+- name: langchain
+  keywords:
+  - LANGCHAIN_API_KEY
+  regex:
+    pattern: (?i)LANGCHAIN_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,127})
+  entropy: 3.5
+- name: langsmith
+  keywords:
+  - LANGSMITH_API_KEY
+  regex:
+    pattern: (?i)LANGSMITH_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,127})
+  entropy: 3.5
+- name: launchdarkly
+  keywords:
+  - LAUNCHDARKLY_API_KEY
+  regex:
+    pattern: (?i)LAUNCHDARKLY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: leaklookup
+  keywords:
+  - LEAKLOOKUP_API_KEY
+  regex:
+    pattern: (?i)LEAKLOOKUP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: linkedin
+  keywords:
+  - LINKEDIN_CLIENT_ID_API_KEY
+  regex:
+    pattern: (?i)LINKEDIN_CLIENT_ID_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: linkedin_access
+  keywords:
+  - LINKEDIN_ACCESS_TOKEN
+  regex:
+    pattern: (?i)LINKEDIN_ACCESS_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{28,117})
+  entropy: 3.5
+- name: linkedin_client
+  keywords:
+  - LINKEDIN_CLIENT_SECRET
+  regex:
+    pattern: (?i)LINKEDIN_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{17,72})
+  entropy: 3.5
+- name: linkedin_refresh
+  keywords:
+  - LINKEDIN_REFRESH_TOKEN
+  regex:
+    pattern: (?i)LINKEDIN_REFRESH_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{31,130})
+  entropy: 3.5
+- name: livekit
+  keywords:
+  - LIVEKIT_API_KEY
+  regex:
+    pattern: (?i)LIVEKIT_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,37})
+  entropy: 3.5
+- name: livekit_api
+  keywords:
+  - LIVEKIT_API_SECRET
+  regex:
+    pattern: (?i)LIVEKIT_API_SECRET[\s'"=:]+([A-Za-z0-9_\-]{25,107})
+  entropy: 3.5
+- name: livekit_secret
+  keywords:
+  - LIVEKIT_SECRET_KEY
+  regex:
+    pattern: (?i)LIVEKIT_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,55})
+  entropy: 3.5
+- name: llama
+  keywords:
+  - LLAMA_API_KEY
+  regex:
+    pattern: (?i)LLAMA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{31,130})
+  entropy: 3.5
+- name: llm
+  keywords:
+  - LLM_API_KEY
+  regex:
+    pattern: (?i)LLM_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{33,140})
+  entropy: 3.5
+- name: locationiq
+  keywords:
+  - LOCATIONIQ_API_KEY
+  regex:
+    pattern: (?i)LOCATIONIQ_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: luma
+  keywords:
+  - LUMA_API_KEY
+  regex:
+    pattern: (?i)LUMA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{46,195})
+  entropy: 3.5
+- name: luma_api_key_suisse
+  keywords:
+  - LUMA_API_KEY_SUISSE
+  regex:
+    pattern: (?i)LUMA_API_KEY_SUISSE[\s'"=:]+([A-Za-z0-9_\-]{46,195})
+  entropy: 3.5
+- name: mailchimp
+  keywords:
+  - MAILCHIMP_API_KEY
+  regex:
+    pattern: (?i)MAILCHIMP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: mailerlite
+  keywords:
+  - MAILERLITE_API_KEY
+  regex:
+    pattern: (?i)MAILERLITE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: mailgun
+  keywords:
+  - MAILGUN_API_KEY
+  regex:
+    pattern: (?i)MAILGUN_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: mailgun_net
+  keywords:
+  - MAILGUN_NET_API_KEY
+  regex:
+    pattern: (?i)MAILGUN_NET_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: mailjet
+  keywords:
+  - MAILJET_API_KEY
+  regex:
+    pattern: (?i)MAILJET_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: make_api
+  keywords:
+  - MAKE_API_TOKEN
+  regex:
+    pattern: (?i)MAKE_API_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{33,137})
+  entropy: 3.5
+- name: malshare
+  keywords:
+  - MALSHARE_API_KEY
+  regex:
+    pattern: (?i)MALSHARE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: meshy
+  keywords:
+  - MESHY_API_KEY
+  regex:
+    pattern: (?i)MESHY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: mexc
+  keywords:
+  - MEXC_API_KEY
+  regex:
+    pattern: (?i)MEXC_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,45})
+  entropy: 3.5
+- name: mexc_api
+  keywords:
+  - MEXC_API_SECRET
+  regex:
+    pattern: (?i)MEXC_API_SECRET[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: minimax
+  keywords:
+  - MINIMAX_API_KEY
+  regex:
+    pattern: (?i)MINIMAX_API_KEY[\s'"=:]+([A-Za-z0-9_\-\.]{19,260})
+  entropy: 3.5
+- name: minimax_group_id
+  keywords:
+  - MINIMAX_GROUP_ID_API_KEY
+  regex:
+    pattern: (?i)MINIMAX_GROUP_ID_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: minio_access
+  keywords:
+  - MINIO_ACCESS_KEY
+  regex:
+    pattern: (?i)MINIO_ACCESS_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,50})
+  entropy: 3.5
+- name: minio_secret
+  keywords:
+  - MINIO_SECRET_KEY
+  regex:
+    pattern: (?i)MINIO_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,62})
+  entropy: 3.5
+- name: mistral
+  keywords:
+  - MISTRAL_API_KEY
+  regex:
+    pattern: (?i)MISTRAL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: mixpanel
+  keywords:
+  - MIXPANEL_TOKEN
+  regex:
+    pattern: (?i)MIXPANEL_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: mojoauth
+  keywords:
+  - MOJOAUTH_API_KEY
+  regex:
+    pattern: (?i)MOJOAUTH_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: mongo
+  keywords:
+  - MONGO_API_KEY
+  regex:
+    pattern: (?i)MONGO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: mongodb
+  keywords:
+  - MONGODB_API_KEY
+  regex:
+    pattern: (?i)MONGODB_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: mongodb_uri
+  keywords:
+  - mongodb
+  - mongo
+  - MONGO_URI
+  - MONGODB_URI
+  regex:
+    pattern: (?i)(mongodb(?:\+srv)?://[^\s"'<>]{10,300})
+  entropy: 3.0
+- name: mssql
+  keywords:
+  - MSSQL_API_KEY
+  regex:
+    pattern: (?i)MSSQL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: murf
+  keywords:
+  - MURF_API_KEY
+  regex:
+    pattern: (?i)MURF_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: mysql_uri
+  keywords:
+  - mysql
+  - MYSQL_URI
+  - MYSQL_URL
+  regex:
+    pattern: (?i)(mysql://[^\s"'<>]{10,300})
+  entropy: 3.0
+- name: n8n
+  keywords:
+  - N8N_API_KEY
+  regex:
+    pattern: (?i)N8N_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{31,130})
+  entropy: 3.5
+- name: netlas
+  keywords:
+  - NETLAS_API_KEY
+  regex:
+    pattern: (?i)NETLAS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: netlify
+  keywords:
+  - NETLIFY_API_KEY
+  regex:
+    pattern: (?i)NETLIFY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: netlify_api
+  keywords:
+  - NETLIFY_API_TOKEN
+  regex:
+    pattern: (?i)NETLIFY_API_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: netlify_auth
+  keywords:
+  - NETLIFY_AUTH_TOKEN
+  regex:
+    pattern: (?i)NETLIFY_AUTH_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: newsapi
+  keywords:
+  - NEWSAPI_API_KEY
+  regex:
+    pattern: (?i)NEWSAPI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: next_stability
+  keywords:
+  - NEXT_STABILITY_API_KEY
+  regex:
+    pattern: (?i)NEXT_STABILITY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,127})
+  entropy: 3.5
+- name: ngrok
+  keywords:
+  - NGROK_TOKEN
+  regex:
+    pattern: (?i)NGROK_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{28,120})
+  entropy: 3.5
+- name: notion
+  keywords:
+  - NOTION_API_KEY
+  regex:
+    pattern: (?i)NOTION_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,125})
+  entropy: 3.5
+- name: nousresearch
+  keywords:
+  - NOUSRESEARCH_API_KEY
+  regex:
+    pattern: (?i)NOUSRESEARCH_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: nova_poshta
+  keywords:
+  - NOVA_POSHTA_API_KEY
+  regex:
+    pattern: (?i)NOVA_POSHTA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: npm
+  keywords:
+  - NPM_TOKEN
+  regex:
+    pattern: (?i)NPM_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: numverify
+  keywords:
+  - NUMVERIFY_API_KEY
+  regex:
+    pattern: (?i)NUMVERIFY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: nvapi
+  keywords:
+  - NVAPI_API_KEY
+  regex:
+    pattern: (?i)NVAPI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{42,175})
+  entropy: 3.5
+- name: nvidia
+  keywords:
+  - NVIDIA_API_KEY
+  regex:
+    pattern: (?i)NVIDIA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: nvidia_ngc
+  keywords:
+  - NVIDIA_NGC_API_KEY
+  regex:
+    pattern: (?i)NVIDIA_NGC_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{31,132})
+  entropy: 3.5
+- name: nyt
+  keywords:
+  - NYT_API_KEY
+  regex:
+    pattern: (?i)NYT_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: ocr_space
+  keywords:
+  - OCR_SPACE_API_KEY
+  regex:
+    pattern: (?i)OCR_SPACE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,37})
+  entropy: 3.5
+- name: okx
+  keywords:
+  - OKX_API_KEY
+  regex:
+    pattern: (?i)OKX_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{36})
+  entropy: 3.5
+- name: okx_passphrase
+  keywords:
+  - OKX_PASSPHRASE
+  regex:
+    pattern: (?i)OKX_PASSPHRASE[\s'"=:]+([A-Za-z0-9_\-\@\#\$\%\^\&\*\!\?]{8,32})
+  entropy: 3.5
+- name: okx_secret
+  keywords:
+  - OKX_SECRET_KEY
+  regex:
+    pattern: (?i)OKX_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{32,64})
+  entropy: 3.5
+- name: omnisend
+  keywords:
+  - OMNISEND_API_KEY
+  regex:
+    pattern: (?i)OMNISEND_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: ondemand
+  keywords:
+  - ONDEMAND_API_KEY
+  regex:
+    pattern: (?i)ONDEMAND_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: onedrive
+  keywords:
+  - ONEDRIVE_API_KEY
+  regex:
+    pattern: (?i)ONEDRIVE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: open_cage
+  keywords:
+  - OPEN_CAGE_API_KEY
+  regex:
+    pattern: (?i)OPEN_CAGE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: open_router
+  keywords:
+  - OPEN_ROUTER_API_KEY
+  regex:
+    pattern: (?i)OPEN_ROUTER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{43,182})
+  entropy: 3.5
+- name: openai
+  keywords:
+  - OPENAI_API_KEY
+  regex:
+    pattern: (?i)OPENAI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{73,200})
+  entropy: 3.5
+- name: opencage
+  keywords:
+  - OPENCAGE_API_KEY
+  regex:
+    pattern: (?i)OPENCAGE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: openhunter
+  keywords:
+  - OPENHUNTER_API_KEY
+  regex:
+    pattern: (?i)OPENHUNTER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{43,182})
+  entropy: 3.5
+- name: openrouter
+  keywords:
+  - OPENROUTER_API_KEY
+  regex:
+    pattern: (?i)OPENROUTER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{43,180})
+  entropy: 3.5
+- name: openweather
+  keywords:
+  - OPENWEATHER_API_KEY
+  regex:
+    pattern: (?i)OPENWEATHER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: pagespeed
+  keywords:
+  - PAGESPEED_API_KEY
+  regex:
+    pattern: (?i)PAGESPEED_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{23,97})
+  entropy: 3.5
+- name: paystack_co
+  keywords:
+  - PAYSTACK_CO_API_KEY
+  regex:
+    pattern: (?i)PAYSTACK_CO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: pdcp
+  keywords:
+  - PDCP_API_KEY
+  regex:
+    pattern: (?i)PDCP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{21,90})
+  entropy: 3.5
+- name: perplexity
+  keywords:
+  - PERPLEXITY_API_KEY
+  regex:
+    pattern: (?i)PERPLEXITY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{31,130})
+  entropy: 3.5
+- name: pexels
+  keywords:
+  - PEXELS_API_KEY
+  regex:
+    pattern: (?i)PEXELS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{33,137})
+  entropy: 3.5
+- name: pgx_n8n
+  keywords:
+  - PGX_N8N_API_KEY
+  regex:
+    pattern: (?i)PGX_N8N_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: phisherman
+  keywords:
+  - PHISHERMAN_API_KEY
+  regex:
+    pattern: (?i)PHISHERMAN_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: pika
+  keywords:
+  - PIKA_API_KEY
+  regex:
+    pattern: (?i)PIKA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: pinterest
+  keywords:
+  - PINTEREST_CLIENT_ID_API_KEY
+  regex:
+    pattern: (?i)PINTEREST_CLIENT_ID_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: pinterest_client
+  keywords:
+  - PINTEREST_CLIENT_SECRET
+  regex:
+    pattern: (?i)PINTEREST_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: pixabay
+  keywords:
+  - PIXABAY_API_KEY
+  regex:
+    pattern: (?i)PIXABAY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: plivo
+  keywords:
+  - PLIVO_API_KEY
+  regex:
+    pattern: (?i)PLIVO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: polygon
+  keywords:
+  - POLYGON_API_KEY
+  regex:
+    pattern: (?i)POLYGON_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: postgres_uri
+  keywords:
+  - postgresql
+  - postgres
+  - POSTGRES_URI
+  - DATABASE_URL
+  regex:
+    pattern: (?i)(postgres(?:ql)?://[^\s"'<>]{10,300})
+  entropy: 3.0
+- name: postgresql
+  keywords:
+  - POSTGRESQL_API_KEY
+  regex:
+    pattern: (?i)POSTGRESQL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: presage
+  keywords:
+  - PRESAGE_API_KEY
+  regex:
+    pattern: (?i)PRESAGE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: probely
+  keywords:
+  - PROBELY_API_KEY
+  regex:
+    pattern: (?i)PROBELY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: projectdiscovery
+  keywords:
+  - PROJECTDISCOVERY_API_KEY
+  regex:
+    pattern: (?i)PROJECTDISCOVERY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: pythonanywhere
+  keywords:
+  - PYTHONANYWHERE_TOKEN
+  regex:
+    pattern: (?i)PYTHONANYWHERE_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: pythonanywhere_api
+  keywords:
+  - PYTHONANYWHERE_API_TOKEN
+  regex:
+    pattern: (?i)PYTHONANYWHERE_API_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: qwen_access
+  keywords:
+  - QWEN_ACCESS_API_KEY
+  regex:
+    pattern: (?i)QWEN_ACCESS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: qwen_api
+  keywords:
+  - QWEN_API_API_KEY
+  regex:
+    pattern: (?i)QWEN_API_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: qwen_api_key
+  keywords:
+  - QWEN_API_KEY_SECRET
+  regex:
+    pattern: (?i)QWEN_API_KEY_SECRET[\s'"=:]+([A-Za-z0-9_\-]{18,75})
+  entropy: 3.5
+- name: qwen_api_key_access
+  keywords:
+  - QWEN_API_KEY_ACCESS
+  regex:
+    pattern: (?i)QWEN_API_KEY_ACCESS[\s'"=:]+([A-Za-z0-9_\-]{15,60})
+  entropy: 3.5
+- name: railway
+  keywords:
+  - RAILWAY_TOKEN
+  regex:
+    pattern: (?i)RAILWAY_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: railway_api
+  keywords:
+  - RAILWAY_API_TOKEN
+  regex:
+    pattern: (?i)RAILWAY_API_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{21,90})
+  entropy: 3.5
+- name: rapid
+  keywords:
+  - RAPID_API_KEY
+  regex:
+    pattern: (?i)RAPID_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,125})
+  entropy: 3.5
+- name: rapid_api_host
+  keywords:
+  - RAPID_API_HOST
+  regex:
+    pattern: (?i)RAPID_API_HOST[\s'"=:]+([A-Za-z0-9_\-]{16,67})
+  entropy: 3.5
+- name: rapidapi
+  keywords:
+  - RAPIDAPI_API_KEY
+  regex:
+    pattern: (?i)RAPIDAPI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: rapidapi_host
+  keywords:
+  - RAPIDAPI_HOST_API_KEY
+  regex:
+    pattern: (?i)RAPIDAPI_HOST_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: razorpay
+  keywords:
+  - RAZORPAY_API_KEY
+  regex:
+    pattern: (?i)RAZORPAY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: razorpay_key
+  keywords:
+  - RAZORPAY_KEY_SECRET
+  regex:
+    pattern: (?i)RAZORPAY_KEY_SECRET[\s'"=:]+([A-Za-z0-9_\-]{15,60})
+  entropy: 3.5
+- name: razorpay_key_id
+  keywords:
+  - RAZORPAY_KEY_ID
+  regex:
+    pattern: (?i)RAZORPAY_KEY_ID[\s'"=:]+([A-Za-z0-9_\-]{15,57})
+  entropy: 3.5
+- name: recaptcha_site
+  keywords:
+  - RECAPTCHA_SITE_KEY
+  regex:
+    pattern: (?i)RECAPTCHA_SITE_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: rechargeapps
+  keywords:
+  - RECHARGEAPPS_API_KEY
+  regex:
+    pattern: (?i)RECHARGEAPPS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: reddit
+  keywords:
+  - REDDIT_CLIENT_ID_API_KEY
+  regex:
+    pattern: (?i)REDDIT_CLIENT_ID_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: reddit_client
+  keywords:
+  - REDDIT_CLIENT_SECRET
+  regex:
+    pattern: (?i)REDDIT_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{17,72})
+  entropy: 3.5
+- name: redis_uri
+  keywords:
+  - redis
+  - REDIS_URL
+  - REDIS_URI
+  regex:
+    pattern: (?i)(redis(?:s)?://[^\s"'<>]{10,250})
+  entropy: 3.0
+- name: refresh
+  keywords:
+  - REFRESH_TOKEN
+  regex:
+    pattern: (?i)REFRESH_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{61,200})
+  entropy: 3.5
+- name: registry_npmjs_org
+  keywords:
+  - REGISTRY_NPMJS_ORG_API_KEY
+  regex:
+    pattern: (?i)REGISTRY_NPMJS_ORG_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: render
+  keywords:
+  - RENDER_API_KEY
+  regex:
+    pattern: (?i)RENDER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: replicate
+  keywords:
+  - REPLICATE_API_KEY
+  regex:
+    pattern: (?i)REPLICATE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{36,152})
+  entropy: 3.5
+- name: replicate_api
+  keywords:
+  - REPLICATE_API_TOKEN
+  regex:
+    pattern: (?i)REPLICATE_API_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{37,155})
+  entropy: 3.5
+- name: resend
+  keywords:
+  - RESEND_API_KEY
+  regex:
+    pattern: (?i)RESEND_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{21,90})
+  entropy: 3.5
+- name: rule_custom_basic_auth
+  keywords:
+  - Basic
+  - basic
+  regex:
+    pattern: (?i)Authorization:\s*Basic\s+([A-Za-z0-9+/]{15,}={0,2})
+- name: rule_custom_basic_auth_url_after
+  keywords:
+  - basic
+  - http
+  - https
+  regex:
+    pattern: (?is)(\bbasic\s+[a-zA-Z0-9=:_\+\/-]{15,200}.{0,150}https?://[^\s"'<>]{4,200})
+  entropy: 0.0
+- name: rule_custom_basic_auth_url_before
+  keywords:
+  - basic
+  - http
+  - https
+  regex:
+    pattern: (?is)(https?://[^\s"'<>]{4,200}.{0,150}\bbasic\s+[a-zA-Z0-9=:_\+\/-]{15,200})
+  entropy: 0.0
+- name: rule_custom_bearer
+  keywords:
+  - Bearer
+  - bearer
+  regex:
+    pattern: (?i)\bbearer\s+([a-zA-Z0-9_\-\.=:_\+\/]{20,300})
+- name: rule_custom_bearer_token_url_after
+  keywords:
+  - bearer
+  - http
+  - https
+  regex:
+    pattern: (?is)(\bbearer\s+[a-zA-Z0-9_\-\.=:_\+\/]{15,300}.{0,150}https?://[^\s"'<>]{4,200})
+  entropy: 0.0
+- name: rule_custom_bearer_token_url_before
+  keywords:
+  - bearer
+  - http
+  - https
+  regex:
+    pattern: (?is)(https?://[^\s"'<>]{4,200}.{0,150}\bbearer\s+[a-zA-Z0-9_\-\.=:_\+\/]{15,300})
+  entropy: 0.0
+- name: apido_relay_token
+  keywords:
+  - api.do.top
+  - do.top
+  - ANTHROPIC_AUTH_TOKEN
+  regex:
+    pattern: \b(sh_[A-Za-z0-9]{18,48})\b
+  entropy: 3.0
+- name: runway
+  keywords:
+  - RUNWAY_API_KEY
+  regex:
+    pattern: (?i)RUNWAY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{79,200})
+  entropy: 3.5
+- name: s3_access
+  keywords:
+  - S3_ACCESS_KEY
+  regex:
+    pattern: (?i)S3_ACCESS_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,50})
+  entropy: 3.5
+- name: s3_secret_access
+  keywords:
+  - S3_SECRET_ACCESS_KEY
+  regex:
+    pattern: (?i)S3_SECRET_ACCESS_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: sarvam
+  keywords:
+  - SARVAM_API_KEY
+  regex:
+    pattern: (?i)SARVAM_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{21,90})
+  entropy: 3.5
+- name: scanii
+  keywords:
+  - SCANII_API_KEY
+  regex:
+    pattern: (?i)SCANII_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: sendgrid
+  keywords:
+  - SENDGRID_API_KEY
+  regex:
+    pattern: (?i)SENDGRID_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: sendinblue
+  keywords:
+  - SENDINBLUE_API_KEY
+  regex:
+    pattern: (?i)SENDINBLUE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: sentry
+  keywords:
+  - SENTRY_API_KEY
+  regex:
+    pattern: (?i)SENTRY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: serp
+  keywords:
+  - SERP_API_KEY
+  regex:
+    pattern: (?i)SERP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{38,160})
+  entropy: 3.5
+- name: serpapi
+  keywords:
+  - SERPAPI_API_KEY
+  regex:
+    pattern: (?i)SERPAPI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{38,160})
+  entropy: 3.5
+- name: serper
+  keywords:
+  - SERPER_API_KEY
+  regex:
+    pattern: (?i)SERPER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{22,95})
+  entropy: 3.5
+- name: shodan
+  keywords:
+  - SHODAN_API_KEY
+  - SHODAN_APIKEY
+  regex:
+    pattern: (?i)SHODAN_API_?KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: skyscanner
+  keywords:
+  - SKYSCANNER_API_KEY
+  regex:
+    pattern: (?i)SKYSCANNER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: slack
+  keywords:
+  - SLACK_API_KEY
+  regex:
+    pattern: (?i)SLACK_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: speechify
+  keywords:
+  - SPEECHIFY_API_KEY
+  regex:
+    pattern: (?i)SPEECHIFY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{25,107})
+  entropy: 3.5
+- name: spotify
+  keywords:
+  - SPOTIFY_CLIENT_ID_API_KEY
+  regex:
+    pattern: (?i)SPOTIFY_CLIENT_ID_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: spotify_access
+  keywords:
+  - SPOTIFY_ACCESS_TOKEN
+  regex:
+    pattern: (?i)SPOTIFY_ACCESS_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{15,62})
+  entropy: 3.5
+- name: spotify_client
+  keywords:
+  - SPOTIFY_CLIENT_SECRET
+  regex:
+    pattern: (?i)SPOTIFY_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: spotify_refresh
+  keywords:
+  - SPOTIFY_REFRESH_TOKEN
+  regex:
+    pattern: (?i)SPOTIFY_REFRESH_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{15,65})
+  entropy: 3.5
+- name: square
+  keywords:
+  - SQUARE_API_KEY
+  regex:
+    pattern: (?i)SQUARE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: stability
+  keywords:
+  - STABILITY_API_KEY
+  regex:
+    pattern: (?i)STABILITY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,127})
+  entropy: 3.5
+- name: stripe
+  keywords:
+  - STRIPE_API_KEY
+  regex:
+    pattern: (?i)STRIPE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: stripe_secret
+  keywords:
+  - STRIPE_SECRET_KEY
+  regex:
+    pattern: (?i)STRIPE_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: stytch
+  keywords:
+  - STYTCH_API_KEY
+  regex:
+    pattern: (?i)STYTCH_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: supabase
+  keywords:
+  - SUPABASE_API_KEY
+  regex:
+    pattern: (?i)SUPABASE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: tavily
+  keywords:
+  - TAVILY_API_KEY
+  regex:
+    pattern: (?i)TAVILY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: tavus
+  keywords:
+  - TAVUS_API_KEY
+  regex:
+    pattern: (?i)TAVUS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: telegram
+  keywords:
+  - TELEGRAM_API_KEY
+  regex:
+    pattern: (?i)TELEGRAM_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: telegram_bot
+  keywords:
+  - TELEGRAM_BOT_TOKEN
+  regex:
+    pattern: (?i)TELEGRAM_BOT_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{15,25})
+  entropy: 3.5
+- name: telegram_org
+  keywords:
+  - TELEGRAM_ORG_API_KEY
+  regex:
+    pattern: (?i)TELEGRAM_ORG_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: telnyx
+  keywords:
+  - TELNYX_API_KEY
+  regex:
+    pattern: (?i)TELNYX_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: tenable
+  keywords:
+  - TENABLE_API_KEY
+  regex:
+    pattern: (?i)TENABLE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: ticketmaster
+  keywords:
+  - TICKETMASTER_API_KEY
+  regex:
+    pattern: (?i)TICKETMASTER_API_KEY[\s'"=:]+([A-Za-z0-9]{32})
+  entropy: 3.5
+- name: tiingo
+  keywords:
+  - TIINGO_API_KEY
+  regex:
+    pattern: (?i)TIINGO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: tiktok_client
+  keywords:
+  - TIKTOK_CLIENT_SECRET
+  regex:
+    pattern: (?i)TIKTOK_CLIENT_SECRET[\s'"=:]+([a-f0-9]{32})
+  entropy: 3.5
+- name: tinker
+  keywords:
+  - TINKER_API_KEY
+  regex:
+    pattern: (?i)TINKER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{43,182})
+  entropy: 3.5
+- name: tinkoff
+  keywords:
+  - TINKOFF_TOKEN
+  regex:
+    pattern: (?i)TINKOFF_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{52,200})
+  entropy: 3.5
+- name: todoist
+  keywords:
+  - TODOIST_API_KEY
+  regex:
+    pattern: (?i)TODOIST_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: together
+  keywords:
+  - TOGETHER_API_KEY
+  regex:
+    pattern: (?i)TOGETHER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{38,160})
+  entropy: 3.5
+- name: together_ai
+  keywords:
+  - TOGETHER_AI_API_KEY
+  regex:
+    pattern: (?i)TOGETHER_AI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{38,160})
+  entropy: 3.5
+- name: tomba
+  keywords:
+  - TOMBA_API_KEY
+  regex:
+    pattern: (?i)TOMBA_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: twilio
+  keywords:
+  - TWILIO_API_KEY
+  regex:
+    pattern: (?i)TWILIO_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: twilio_api_key
+  keywords:
+  - TWILIO_API_KEY_SECRET
+  regex:
+    pattern: (?i)TWILIO_API_KEY_SECRET[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: twilio_api_key_sid
+  keywords:
+  - TWILIO_API_KEY_SID
+  regex:
+    pattern: (?i)TWILIO_API_KEY_SID[\s'"=:]+([A-Za-z0-9_\-]{20,85})
+  entropy: 3.5
+- name: twilio_auth
+  keywords:
+  - TWILIO_AUTH_TOKEN
+  regex:
+    pattern: (?i)TWILIO_AUTH_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: twitter
+  keywords:
+  - TWITTER_CLIENT_ID
+  regex:
+    pattern: (?i)TWITTER_CLIENT_ID[\s'"=:]+([A-Za-z0-9_\-]{20,85})
+  entropy: 3.5
+- name: twitter_api
+  keywords:
+  - TWITTER_API_SECRET
+  regex:
+    pattern: (?i)TWITTER_API_SECRET[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: twitter_client
+  keywords:
+  - TWITTER_CLIENT_SECRET
+  regex:
+    pattern: (?i)TWITTER_CLIENT_SECRET[\s'"=:]+([A-Za-z0-9_\-]{30,125})
+  entropy: 3.5
+- name: typeform
+  keywords:
+  - TYPEFORM_API_KEY
+  regex:
+    pattern: (?i)TYPEFORM_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{37,157})
+  entropy: 3.5
+- name: unsplash
+  keywords:
+  - UNSPLASH_API_KEY
+  regex:
+    pattern: (?i)UNSPLASH_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: unsplash_access
+  keywords:
+  - UNSPLASH_ACCESS_KEY
+  regex:
+    pattern: (?i)UNSPLASH_ACCESS_KEY[\s'"=:]+([A-Za-z0-9_\-]{25,107})
+  entropy: 3.5
+- name: unsplash_secret
+  keywords:
+  - UNSPLASH_SECRET_KEY
+  regex:
+    pattern: (?i)UNSPLASH_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{25,107})
+  entropy: 3.5
+- name: urlscan
+  keywords:
+  - URLSCAN_API_KEY
+  regex:
+    pattern: (?i)URLSCAN_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: vercel
+  keywords:
+  - VERCEL_API_KEY
+  regex:
+    pattern: (?i)VERCEL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: vercel_ai
+  keywords:
+  - VERCEL_AI_API_KEY
+  regex:
+    pattern: (?i)VERCEL_AI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: vercel_api
+  keywords:
+  - VERCEL_API_TOKEN
+  regex:
+    pattern: (?i)VERCEL_API_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{15,60})
+  entropy: 3.5
+- name: vercel_org_id
+  keywords:
+  - VERCEL_ORG_ID
+  regex:
+    pattern: (?i)VERCEL_ORG_ID[\s'"=:]+([A-Za-z0-9_\-]{10,40})
+  entropy: 3.5
+- name: vercel_project_id
+  keywords:
+  - VERCEL_PROJECT_ID
+  regex:
+    pattern: (?i)VERCEL_PROJECT_ID[\s'"=:]+([A-Za-z0-9_\-]{10,40})
+  entropy: 3.5
+- name: veriphone
+  keywords:
+  - VERIPHONE_API_KEY
+  regex:
+    pattern: (?i)VERIPHONE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: virustotal
+  keywords:
+  - VIRUSTOTAL_API_KEY
+  regex:
+    pattern: (?i)VIRUSTOTAL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{38,160})
+  entropy: 3.5
+- name: vlm
+  keywords:
+  - VLM_API_KEY
+  regex:
+    pattern: (?i)VLM_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{21,87})
+  entropy: 3.5
+- name: vultr
+  keywords:
+  - VULTR_API_KEY
+  regex:
+    pattern: (?i)VULTR_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{21,90})
+  entropy: 3.5
+- name: wandb
+  keywords:
+  - WANDB_API_KEY
+  regex:
+    pattern: (?i)WANDB_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: warrant
+  keywords:
+  - WARRANT_API_KEY
+  regex:
+    pattern: (?i)WARRANT_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: weather
+  keywords:
+  - WEATHER_API_KEY
+  regex:
+    pattern: (?i)WEATHER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{18,77})
+  entropy: 3.5
+- name: web_aws_access
+  keywords:
+  - WEB_AWS_ACCESS_KEY
+  regex:
+    pattern: (?i)WEB_AWS_ACCESS_KEY[\s'"=:]+([A-Za-z0-9_\-]{15,50})
+  entropy: 3.5
+- name: web_aws_secret
+  keywords:
+  - WEB_AWS_SECRET_KEY
+  regex:
+    pattern: (?i)WEB_AWS_SECRET_KEY[\s'"=:]+([A-Za-z0-9_\-]{24,100})
+  entropy: 3.5
+- name: wot
+  keywords:
+  - WOT_API_KEY
+  regex:
+    pattern: (?i)WOT_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: xai
+  keywords:
+  - XAI_API_KEY
+  regex:
+    pattern: (?i)XAI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{50,200})
+  entropy: 3.5
+- name: youtube
+  keywords:
+  - YOUTUBE_API_KEY
+  regex:
+    pattern: (?i)YOUTUBE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{23,97})
+  entropy: 3.5
+
+- name: etherscan
+  keywords:
+  - ETHERSCAN_API_KEY
+  - etherscan
+  - ETHERSCAN_KEY
+  regex:
+    pattern: (?i)ETHERSCAN[_\s]*(?:API[_\s]*)?KEY[_\s]*[:=]+\s*['"]?([A-Za-z0-9]{34})['"]?
+  entropy: 3.2
+
+- name: cryptocompare
+  keywords:
+  - CRYPTOCOMPARE_API_KEY
+  - cryptocompare
+  - crypto_compare
+  regex:
+    pattern: (?i)(?:CRYPTOCOMPARE|CRYPTO_COMPARE)[_\s]*(?:API[_\s]*)?KEY[_\s]*[:=]+\s*['"]?([a-f0-9]{64})['"]?
+  entropy: 4.0
+- name: coingecko
+  keywords:
+  - COINGECKO_API_KEY
+  - coingecko
+  - CG-
+  regex:
+    pattern: (?i)(?:COINGECKO|CG)[_\s]*(?:API[_\s]*|DEMO_)?KEY[_\s]*[:=]+\s*['"]?(CG-[A-Za-z0-9_-]{20,50})['"]?
+  entropy: 3.5
+
+- name: spotify
+  keywords:
+  - spotify
+  - SPOTIFY_CLIENT_ID
+  - SPOTIFY_CLIENT_SECRET
+  - SPOTIFY_KEY
+  regex:
+    pattern: (?i)(?:SPOTIFY[_\s]*(?:CLIENT[_\s]*)?(?:SECRET|KEY|ID)[_\s]*[:=]+\s*['"]?([A-Za-z0-9]{32})['"]?)
+  entropy: 3.5
+
+- name: moralis
+  keywords:
+  - MORALIS_API_KEY
+  - moralis
+  - MORALIS_KEY
+  regex:
+    pattern: (?i)MORALIS[_\s]*(?:API[_\s]*)?KEY[_\s]*[:=]+\s*['"]?([A-Za-z0-9]{30,50})['"]?
+  entropy: 3.5
+
+- name: infura
+  keywords:
+  - INFURA_API_KEY
+  - INFURA_PROJECT_ID
+  - infura
+  regex:
+    pattern: (?i)(?:INFURA|infura)[_\s]*(?:API[_\s]*KEY|PROJECT[_\s]*ID)[_\s]*[:=]+\s*['"]?([a-f0-9]{32})['"]?
+  entropy: 3.5
+
+- name: alchemy
+  keywords:
+  - ALCHEMY_API_KEY
+  - ALCHEMY_KEY
+  - alchemy
+  regex:
+    pattern: (?i)ALCHEMY[_\s]*(?:API[_\s]*)?KEY[_\s]*[:=]+\s*['"]?([A-Za-z0-9_-]{20,50})['"]?
+  entropy: 3.5
+
+- name: debank
+  keywords:
+  - DEBANK_API_KEY
+  - DEBANK_KEY
+  - debank
+  regex:
+    pattern: (?i)DEBANK[_\s]*(?:API[_\s]*)?KEY[_\s]*[:=]+\s*['"]?([a-f0-9]{40})['"]?
+  entropy: 4.0
+
+- name: cerebras
+  keywords:
+  - CEREBRAS_API_KEY
+  - cerebras
+  - csk-
+  regex:
+    pattern: (?i)CEREBRAS[_\s]*(?:API[_\s]*)?KEY[_\s]*[:=]+\s*['"]?(csk-[a-z0-9]{45,60})['"]?
+  entropy: 3.5
+
+- name: kimi
+  keywords:
+  - KIMI_API_KEY
+  - sk-kimi-
+  - kimi-for-coding
+  - moonshot
+  regex:
+    pattern: (?i)(?:KIMI|MOONSHOT)[_\s]*(?:API[_\s]*)?KEY[_\s]*[:=]+\s*['"]?(sk-kimi-[a-zA-Z0-9]{50,80})['"]?
+  entropy: 4.0
+
+- name: mulerouter
+  keywords:
+  - MULEROUTER_API_KEY
+  - mulerouter
+  - sk-mr-
+  regex:
+    pattern: (?i)MULEROUTER[_\s]*(?:API[_\s]*)?KEY[_\s]*[:=]+\s*['"]?(sk-mr-[a-f0-9]{50,70})['"]?
+  entropy: 4.0
+
+- name: box_token
+  keywords:
+  - BOX_APP_TOKEN
+  - BOX_TOKEN
+  - box_token
+  regex:
+    pattern: (?i)BOX[_\s]*(?:APP[\s]*)?TOKEN[\s]*[:=]+\s*['"]?([A-Za-z0-9]{20,50})['"]?
+  entropy: 3.5
+- name: chaos_pdcp
+  keywords:
+  - CHAOS_API_KEY
+  - PDCP_API_KEY
+  - CHAOS_KEY
+  - chaos.projectdiscovery.io
+  - dns.projectdiscovery.io
+  - chaos-client
+  regex:
+    pattern: (?i)(?:chaos[_-]?api[_-]?key|pdcp[_-]?api[_-]?key|chaos[_-]?key)["'\s:=]+([A-Za-z0-9._~+/=-]{30,400})
+  entropy: 3.5
+- name: chaos_jwt
+  keywords:
+  - CHAOS_API_KEY
+  - PDCP_API_KEY
+  - CHAOS_KEY
+  - chaos.projectdiscovery.io
+  - dns.projectdiscovery.io
+  regex:
+    pattern: eyJ[A-Za-z0-9_-]{15,}\.[A-Za-z0-9_-]{15,}\.[A-Za-z0-9_-]{15,}
+  entropy: 3.5
+
+
+# === DB-platform API keys 2026-09-19 (pivot v2: account-level lateral) ===
+- name: Rule_Matrix_MONGO_ATLAS_PUBLIC_KEY
+  keywords:
+  - MONGO_ATLAS_PUBLIC_KEY
+  regex:
+    pattern: (?i)MONGO_ATLAS_PUBLIC_KEY[\s'"=:]+([A-Za-z0-9]{5,20})
+  entropy: 3.0
+- name: Rule_Matrix_MONGO_ATLAS_PRIVATE_KEY
+  keywords:
+  - MONGO_ATLAS_PRIVATE_KEY
+  regex:
+    pattern: (?i)MONGO_ATLAS_PRIVATE_KEY[\s'"=:]+([A-Fa-f0-9\-]{20,64})
+  entropy: 3.5
+- name: Rule_Matrix_MONGO_ATLAS_API_KEY
+  keywords:
+  - MONGO_ATLAS_API_KEY
+  - MONGODB_ATLAS_API_KEY
+  regex:
+    pattern: (?i)(?:MONGO(?:DB)?_ATLAS_API_KEY)[\s'"=:]+([^\s'";]{15,80})
+  entropy: 3.5
+- name: Rule_Matrix_NEON_API_KEY
+  keywords:
+  - NEON_API_KEY
+  regex:
+    pattern: (?i)NEON_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,120})
+  entropy: 3.5
+- name: Rule_Matrix_TURSO_API_KEY
+  keywords:
+  - TURSO_API_KEY
+  regex:
+    pattern: (?i)TURSO_API_KEY[\s'"=:]+(v2\.eyJ[A-Za-z0-9_\-]+\.[A-Za-z0-9_\-]+\.[A-Za-z0-9_\-]+)
+  entropy: 3.5
+- name: Rule_Matrix_TURSO_DATABASE_TOKEN
+  keywords:
+  - TURSO_DATABASE_TOKEN
+  regex:
+    pattern: (?i)TURSO_DATABASE_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{30,120})
+  entropy: 3.5
+- name: Rule_Matrix_PLANETSCALE_SERVICE_TOKEN_ID
+  keywords:
+  - PLANETSCALE_SERVICE_TOKEN_ID
+  regex:
+    pattern: (?i)PLANETSCALE_SERVICE_TOKEN_ID[\s'"=:]+([A-Za-z0-9]{8,40})
+  entropy: 3.0
+- name: Rule_Matrix_PLANETSCALE_SERVICE_TOKEN
+  keywords:
+  - PLANETSCALE_SERVICE_TOKEN
+  regex:
+    pattern: (?i)PLANETSCALE_SERVICE_TOKEN[\s'"=:]+([A-Za-z0-9_\-]{20,100})
+  entropy: 3.5
+- name: Rule_Matrix_PLANETSCALE_TOKEN
+  keywords:
+  - PLANETSCALE_TOKEN
+  regex:
+    pattern: (?i)PLANETSCALE_TOKEN[\s'"=:]+(pso_[A-Za-z0-9_\-]{15,100})
+  entropy: 3.5
+- name: Rule_Matrix_AIVEN_API_TOKEN
+  keywords:
+  - AIVEN_API_TOKEN
+  - AIVEN_TOKEN
+  regex:
+    pattern: (?i)AIVEN_(?:API_)?TOKEN[\s'"=:]+([A-Za-z0-9_\-]{20,100})
+  entropy: 3.5
+- name: Rule_Matrix_UPSTASH_REDIS_REST_URL
+  keywords:
+  - UPSTASH_REDIS_REST_URL
+  regex:
+    pattern: (?i)UPSTASH_REDIS_REST_URL[\s'"=:]+(https?://[A-Za-z0-9\-]+\.upstash\.io)
+  entropy: 3.0
+- name: Rule_Matrix_UPSTASH_REDIS_REST_TOKEN
+  keywords:
+  - UPSTASH_REDIS_REST_TOKEN
+  - UPSTASH_TOKEN
+  regex:
+    pattern: (?i)UPSTASH(?:_REDIS_REST)?_TOKEN[\s'"=:]+([A-Za-z0-9]{20,80})
+  entropy: 3.5
+- name: Rule_Matrix_COCKROACH_API_KEY
+  keywords:
+  - COCKROACH_API_KEY
+  - COCKROACH_CLOUD_API_KEY
+  regex:
+    pattern: (?i)COCKROACH(?:_CLOUD)?_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{20,100})
+  entropy: 3.5
+- name: Rule_Matrix_ASTRA_APPLICATION_TOKEN
+  keywords:
+  - ASTRA_APPLICATION_TOKEN
+  - ASTRA_TOKEN
+  - ASTRA_DB_APPLICATION_TOKEN
+  regex:
+    pattern: (?i)ASTRA(?:_DB)?(?:_APPLICATION)?_TOKEN[\s'"=:]+(AstraCS:[A-Za-z0-9]{10,})
+  entropy: 3.5
+- name: Rule_Matrix_VAULT_TOKEN
+  keywords:
+  - VAULT_TOKEN
+  - hvs.
+  - hvb.
+  - hvr.
+  regex:
+    pattern: (?i)\b(?:hv)?[sbr]\.[a-zA-Z0-9]{24,64}\b
+  entropy: 3.5
+- name: Rule_Supply_Chain_IOC
+  keywords:
+  - IfYouRevokeThisTokenItWillWipeTheComputerOfTheOwner
+  - git-tanstack
+  - gh-token-monitor
+  - ai_init
+  - SHA1HULUD
+  - 0xE1f2395ee43e45A1556EC6438a88c31B83493103
+  - eth_call
+  regex:
+    pattern: "(?i)(IfYouRevokeThisTokenItWillWipeTheComputerOfTheOwner|thebeautifulmarchoftime|Shai-Hulud: Here We Go Again|Shai-Hulud: The Second Coming|Shai-Hulud: The Third Coming|Shai-Hulud: The Continued Coming|git-tanstack\\.com|git-tanstack\\[\\.\\]com|83\\.142\\.209\\.194|tmp\\.ts018051808\\.lock|/tmp/voicefromtheouterworld\\.lock|com\\.user\\.gh-token-monitor|gh-token-monitor\\.service|ai_init\\.js|opensearch_init\\.js|router_runtime\\.js|setup_bun\\.js|bun_environment\\.js|Math_Symbol\\.js|truffleSecrets\\.json|actionsSecrets\\.json|npm-cache\\.com|awqhnjewqjkl\\.icu|SHA1HULUD|0xE1f2395ee43e45A1556EC6438a88c31B83493103|_dec\\(scramble\\(|de0fac2e4500dabe0009e67214ff5f5447ce83dd|bbbca2ddaa5d8feaa63e36b76fdaad77386f024f|\\b(?:laza|kanly|ghola|mentat|lasgun|sietch|fedaykin|tleilaxu|sandworm|sardaukar|ornithopter)\\b)"
+  entropy: 0.0
+
+# ── OSINT API — классический набор (2026-09-24; чекеры: checkers/service_recon.py) ──
+- name: binaryedge
+  keywords:
+  - BINARYEDGE_API_KEY
+  regex:
+    pattern: (?i)BINARYEDGE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: censys
+  keywords:
+  - CENSYS_API_ID
+  - CENSYS_API_SECRET
+  regex:
+    pattern: (?is)(CENSYS_API_ID[\s'"=:]+[A-Za-z0-9_\-]{16,64}[\s\S]{0,200}?CENSYS_API_SECRET[\s'"=:]+[A-Za-z0-9_\-]{30,120})
+  entropy: 3.5
+- name: emailrep
+  keywords:
+  - EMAILREP_API_KEY
+  regex:
+    pattern: (?i)EMAILREP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: fullcontact
+  keywords:
+  - FULLCONTACT_API_KEY
+  regex:
+    pattern: (?i)FULLCONTACT_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: greynoise
+  keywords:
+  - GREYNOISE_API_KEY
+  regex:
+    pattern: (?i)GREYNOISE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: hunter
+  keywords:
+  - HUNTER_API_KEY
+  regex:
+    pattern: (?i)HUNTER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: hunter_how
+  keywords:
+  - HUNTER_HOW_API_KEY
+  - hunter_how
+  regex:
+    pattern: (?i)HUNTER_HOW_API_KEY[\s'"=:]+([A-Za-z0-9]{8,80})
+  entropy: 3.0
+- name: ip2whois
+  keywords:
+  - IP2WHOIS_API_KEY
+  regex:
+    pattern: (?i)IP2WHOIS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: ipgeolocation
+  keywords:
+  - IPGEOLOCATION_API_KEY
+  regex:
+    pattern: (?i)IPGEOLOCATION_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: oathnet
+  keywords:
+  - OATHNET_API_KEY
+  regex:
+    pattern: (?i)OATHNET_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: phishtank
+  keywords:
+  - PHISHTANK_API_KEY
+  regex:
+    pattern: (?i)PHISHTANK_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: securitytrails
+  keywords:
+  - SECURITYTRAILS_API_KEY
+  regex:
+    pattern: (?i)SECURITYTRAILS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+
+- name: dnsdb
+  keywords:
+  - DNSDB_API_KEY
+  regex:
+    pattern: (?i)DNSDB_API_KEY[\s'\"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: riskiq
+  keywords:
+  - RISKIQ_API_KEY
+  - RISKIQ_API_SECRET
+  regex:
+    pattern: (?is)(RISKIQ_API_KEY[\s'\"=:]+[A-Za-z0-9_\-]{16,80}[\s\S]{0,200}?RISKIQ_API_SECRET[\s'\"=:]+[A-Za-z0-9_\-]{16,120})
+  entropy: 3.5
+- name: did
+  keywords:
+  - D_ID_API_KEY
+  - DID_API_KEY
+  - D-ID_API_KEY
+  regex:
+    pattern: (?i)(?:D_ID_API_KEY|DID_API_KEY|D-ID_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: synthesia
+  keywords:
+  - SYNTHESIA_API_KEY
+  regex:
+    pattern: (?i)(?:SYNTHESIA_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: sync
+  keywords:
+  - SYNC_API_KEY
+  - SYNCLABS_API_KEY
+  regex:
+    pattern: (?i)(?:SYNC_API_KEY|SYNCLABS_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: simli
+  keywords:
+  - SIMLI_API_KEY
+  regex:
+    pattern: (?i)(?:SIMLI_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: colossyan
+  keywords:
+  - COLOSSYAN_API_KEY
+  regex:
+    pattern: (?i)(?:COLOSSYAN_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: elai
+  keywords:
+  - ELAI_API_KEY
+  regex:
+    pattern: (?i)(?:ELAI_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: deepbrain
+  keywords:
+  - DEEPBRAIN_API_KEY
+  regex:
+    pattern: (?i)(?:DEEPBRAIN_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: tripo
+  keywords:
+  - TRIPO_API_KEY
+  - TRIPO3D_API_KEY
+  regex:
+    pattern: (?i)(?:TRIPO_API_KEY|TRIPO3D_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: rodin
+  keywords:
+  - RODIN_API_KEY
+  - HYPER3D_API_KEY
+  regex:
+    pattern: (?i)(?:RODIN_API_KEY|HYPER3D_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: csm
+  keywords:
+  - CSM_API_KEY
+  regex:
+    pattern: (?i)(?:CSM_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: kaedim
+  keywords:
+  - KAEDIM_API_KEY
+  regex:
+    pattern: (?i)(?:KAEDIM_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: sloyd
+  keywords:
+  - SLOYD_API_KEY
+  regex:
+    pattern: (?i)(?:SLOYD_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: 3dfy
+  keywords:
+  - 3DFY_API_KEY
+  regex:
+    pattern: (?i)(?:3DFY_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: haiper
+  keywords:
+  - HAIPER_API_KEY
+  regex:
+    pattern: (?i)(?:HAIPER_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: genmo
+  keywords:
+  - GENMO_API_KEY
+  regex:
+    pattern: (?i)(?:GENMO_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: vidu
+  keywords:
+  - VIDU_API_KEY
+  regex:
+    pattern: (?i)(?:VIDU_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: pixverse
+  keywords:
+  - PIXVERSE_API_KEY
+  regex:
+    pattern: (?i)(?:PIXVERSE_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: moonvalley
+  keywords:
+  - MOONVALLEY_API_KEY
+  regex:
+    pattern: (?i)(?:MOONVALLEY_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: decart
+  keywords:
+  - DECART_API_KEY
+  regex:
+    pattern: (?i)(?:DECART_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: higgsfield
+  keywords:
+  - HIGGSFIELD_API_KEY
+  regex:
+    pattern: (?i)(?:HIGGSFIELD_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: domoai
+  keywords:
+  - DOMOAI_API_KEY
+  regex:
+    pattern: (?i)(?:DOMOAI_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: goenhance
+  keywords:
+  - GOENHANCE_API_KEY
+  regex:
+    pattern: (?i)(?:GOENHANCE_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: kaiber
+  keywords:
+  - KAIBER_API_KEY
+  regex:
+    pattern: (?i)(?:KAIBER_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: wonder
+  keywords:
+  - WONDER_API_KEY
+  - WONDERDYNAMICS_API_KEY
+  regex:
+    pattern: (?i)(?:WONDER_API_KEY|WONDERDYNAMICS_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: deepmotion
+  keywords:
+  - DEEPMOTION_API_KEY
+  regex:
+    pattern: (?i)(?:DEEPMOTION_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: plask
+  keywords:
+  - PLASK_API_KEY
+  regex:
+    pattern: (?i)(?:PLASK_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: segmind
+  keywords:
+  - SEGMIND_API_KEY
+  regex:
+    pattern: (?i)(?:SEGMIND_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: wavespeed
+  keywords:
+  - WAVESPEED_API_KEY
+  - WAVESPEEDAI_API_KEY
+  regex:
+    pattern: (?i)(?:WAVESPEED_API_KEY|WAVESPEEDAI_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: novita
+  keywords:
+  - NOVITA_API_KEY
+  regex:
+    pattern: (?i)(?:NOVITA_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: modelslab
+  keywords:
+  - MODELSLAB_API_KEY
+  - MODELSLAB_KEY
+  regex:
+    pattern: (?i)(?:MODELSLAB_API_KEY|MODELSLAB_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: leonardo
+  keywords:
+  - LEONARDO_API_KEY
+  - LEONARDOAI_API_KEY
+  regex:
+    pattern: (?i)(?:LEONARDO_API_KEY|LEONARDOAI_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: freepik
+  keywords:
+  - FREEPIK_API_KEY
+  regex:
+    pattern: (?i)(?:FREEPIK_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: ltx
+  keywords:
+  - LTX_API_KEY
+  - LTXSTUDIO_API_KEY
+  regex:
+    pattern: (?i)(?:LTX_API_KEY|LTXSTUDIO_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: moveai
+  keywords:
+  - MOVEAI_API_KEY
+  - MOVE_AI_API_KEY
+  regex:
+    pattern: (?i)(?:MOVEAI_API_KEY|MOVE_AI_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: runware
+  keywords:
+  - RUNWARE_API_KEY
+  regex:
+    pattern: (?i)(?:RUNWARE_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: dashscope
+  keywords:
+  - DASHSCOPE_API_KEY
+  regex:
+    pattern: (?i)(?:DASHSCOPE_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: criminalip
+  keywords:
+  - CRIMINALIP_API_KEY
+  - CRIMINAL_IP_API_KEY
+  regex:
+    pattern: (?i)(?:CRIMINALIP_API_KEY|CRIMINAL_IP_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: pulsedive
+  keywords:
+  - PULSEDIVE_API_KEY
+  - PULSEDIVE_KEY
+  regex:
+    pattern: (?i)(?:PULSEDIVE_API_KEY|PULSEDIVE_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: leakix
+  keywords:
+  - LEAKIX_API_KEY
+  - LEAKIX_KEY
+  regex:
+    pattern: (?i)(?:LEAKIX_API_KEY|LEAKIX_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: onyphe
+  keywords:
+  - ONYPHE_API_KEY
+  regex:
+    pattern: (?i)(?:ONYPHE_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: zoomeye
+  keywords:
+  - ZOOMEYE_API_KEY
+  - ZOOMEYE_KEY
+  regex:
+    pattern: (?i)(?:ZOOMEYE_API_KEY|ZOOMEYE_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: malwarebazaar
+  keywords:
+  - MALWAREBAZAAR_API_KEY
+  - MALWARE_BAZAAR_API_KEY
+  regex:
+    pattern: (?i)(?:MALWAREBAZAAR_API_KEY|MALWARE_BAZAAR_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: urlhaus
+  keywords:
+  - URLHAUS_AUTH_KEY
+  - URLHAUS_API_KEY
+  regex:
+    pattern: (?i)(?:URLHAUS_AUTH_KEY|URLHAUS_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: abusech
+  keywords:
+  - ABUSECH_AUTH_KEY
+  - ABUSECH_API_KEY
+  regex:
+    pattern: (?i)(?:ABUSECH_AUTH_KEY|ABUSECH_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: whoisxml
+  keywords:
+  - WHOISXML_API_KEY
+  - WHOIS_XML_API_KEY
+  - WHOISXMLAPI_KEY
+  regex:
+    pattern: (?i)(?:WHOISXML_API_KEY|WHOIS_XML_API_KEY|WHOISXMLAPI_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+- name: otx
+  keywords:
+  - OTX_API_KEY
+  regex:
+    pattern: (?i)(?:OTX_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,120})
+  entropy: 3.5
+
+- name: ahrefs
+  keywords:
+  - AHREFS_API_KEY
+  - AHREFS_TOKEN
+  - AHREFS_KEY
+  regex:
+    pattern: (?i)(?:AHREFS_API_KEY|AHREFS_TOKEN|AHREFS_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: bevigil
+  keywords:
+  - BEVIGIL_API_KEY
+  - BEVIGIL_KEY
+  - BEVIGIL_TOKEN
+  regex:
+    pattern: (?i)(?:BEVIGIL_API_KEY|BEVIGIL_KEY|BEVIGIL_TOKEN)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: builtwith
+  keywords:
+  - BUILTWITH_API_KEY
+  - BUILTWITH_KEY
+  regex:
+    pattern: (?i)(?:BUILTWITH_API_KEY|BUILTWITH_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: c99
+  keywords:
+  - C99_API_KEY
+  - C99NL_API_KEY
+  - C99_KEY
+  regex:
+    pattern: (?i)(?:C99_API_KEY|C99NL_API_KEY|C99_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: deepinfo
+  keywords:
+  - DEEPINFO_API_KEY
+  - DEEPINFO_TOKEN
+  - DEEPINFO_KEY
+  regex:
+    pattern: (?i)(?:DEEPINFO_API_KEY|DEEPINFO_TOKEN|DEEPINFO_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: digicert
+  keywords:
+  - DIGICERT_API_KEY
+  - DIGICERT_API_TOKEN
+  - CERTCENTRAL_API_KEY
+  - DIGICERT_CERTCENTRAL_API_KEY
+  regex:
+    pattern: (?i)(?:DIGICERT_API_KEY|DIGICERT_API_TOKEN|CERTCENTRAL_API_KEY|DIGICERT_CERTCENTRAL_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: dnslytics
+  keywords:
+  - DNSLYTICS_API_KEY
+  - DNSLYTICS_KEY
+  regex:
+    pattern: (?i)(?:DNSLYTICS_API_KEY|DNSLYTICS_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: dnsrepo
+  keywords:
+  - DNSREPO_API_KEY
+  - DNSREPO_KEY
+  regex:
+    pattern: (?i)(?:DNSREPO_API_KEY|DNSREPO_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: fullhunt
+  keywords:
+  - FULLHUNT_API_KEY
+  - FULLHUNT_KEY
+  regex:
+    pattern: (?i)(?:FULLHUNT_API_KEY|FULLHUNT_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: hackertarget
+  keywords:
+  - HACKERTARGET_API_KEY
+  - HACKERTARGET_KEY
+  regex:
+    pattern: (?i)(?:HACKERTARGET_API_KEY|HACKERTARGET_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: maltiverse
+  keywords:
+  - MALTIVERSE_API_KEY
+  - MALTIVERSE_AUTH_TOKEN
+  - MALTIVERSE_TOKEN
+  regex:
+    pattern: (?i)(?:MALTIVERSE_API_KEY|MALTIVERSE_AUTH_TOKEN|MALTIVERSE_TOKEN)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: mnemonic
+  keywords:
+  - MNEMONIC_API_KEY
+  - MNEMONIC_PDNS_KEY
+  regex:
+    pattern: (?i)(?:MNEMONIC_API_KEY|MNEMONIC_PDNS_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: pentesttools
+  keywords:
+  - PENTESTTOOLS_API_KEY
+  - PENTEST_TOOLS_API_KEY
+  - PENTESTTOOLS_KEY
+  regex:
+    pattern: (?i)(?:PENTESTTOOLS_API_KEY|PENTEST_TOOLS_API_KEY|PENTESTTOOLS_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: publicwww
+  keywords:
+  - PUBLICWWW_API_KEY
+  - PUBLICWWW_KEY
+  regex:
+    pattern: (?i)(?:PUBLICWWW_API_KEY|PUBLICWWW_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: quake
+  keywords:
+  - QUAKE_API_KEY
+  - QUAKE_TOKEN
+  - QUAKE360_API_KEY
+  regex:
+    pattern: (?i)(?:QUAKE_API_KEY|QUAKE_TOKEN|QUAKE360_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: socradar
+  keywords:
+  - SOCRADAR_API_KEY
+  - SOCRADAR_KEY
+  - SOCRADAR_TOKEN
+  regex:
+    pattern: (?i)(?:SOCRADAR_API_KEY|SOCRADAR_KEY|SOCRADAR_TOKEN)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: spamhaus
+  keywords:
+  - SPAMHAUS_API_KEY
+  - SPAMHAUS_DQS_KEY
+  regex:
+    pattern: (?i)(?:SPAMHAUS_API_KEY|SPAMHAUS_DQS_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: threatbook
+  keywords:
+  - THREATBOOK_API_KEY
+  - THREATBOOK_KEY
+  - THREATBOOK_APIKEY
+  regex:
+    pattern: (?i)(?:THREATBOOK_API_KEY|THREATBOOK_KEY|THREATBOOK_APIKEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: zetalytics
+  keywords:
+  - ZETALYTICS_API_KEY
+  - ZETALYTICS_KEY
+  - ZETA_API_KEY
+  regex:
+    pattern: (?i)(?:ZETALYTICS_API_KEY|ZETALYTICS_KEY|ZETA_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: passivedns
+  keywords:
+  - PASSIVEDNS_API_KEY
+  - PASSIVE_DNS_API_KEY
+  - PASSIVEDNS_CN_KEY
+  regex:
+    pattern: (?i)(?:PASSIVEDNS_API_KEY|PASSIVE_DNS_API_KEY|PASSIVEDNS_CN_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: sslmate
+  keywords:
+  - SSLMATE_API_KEY
+  - CERTSPOTTER_API_KEY
+  - SSLMATE_CERTSPOTTER_KEY
+  regex:
+    pattern: (?i)(?:SSLMATE_API_KEY|CERTSPOTTER_API_KEY|SSLMATE_CERTSPOTTER_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: intelx
+  keywords:
+  - INTELX_API_KEY
+  - INTEL_X_API_KEY
+  - INTELX_KEY
+  regex:
+    pattern: (?i)(?:INTELX_API_KEY|INTEL_X_API_KEY|INTELX_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+- name: fofa
+  keywords:
+  - FOFA_API_KEY
+  - FOFA_KEY
+  regex:
+    pattern: (?i)(?:FOFA_API_KEY|FOFA_KEY)[\s'"=:]+([A-Za-z0-9_\-]{14,120})
+  entropy: 3.5
+
+- name: siliconflow
+  keywords:
+  - SILICONFLOW_API_KEY
+  - SILICONFLOW_KEY
+  - SILICON_FLOW_API_KEY
+  regex:
+    pattern: (?i)(?:SILICONFLOW_API_KEY|SILICONFLOW_KEY|SILICON_FLOW_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{16,120})
+  entropy: 3.5
+
+- name: 302ai
+  keywords:
+  - 302AI_API_KEY
+  - API302_KEY
+  - 302_AI_API_KEY
+  regex:
+    pattern: (?i)(?:302AI_API_KEY|API302_KEY|302_AI_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{16,120})
+  entropy: 3.5
+
+- name: n1n
+  keywords:
+  - N1N_API_KEY
+  - N1N_KEY
+  regex:
+    pattern: (?i)(?:N1N_API_KEY|N1N_KEY)[\s'"=:]+([A-Za-z0-9_\-]{16,120})
+  entropy: 3.5
+
+- name: aihubmix
+  keywords:
+  - AIHUBMIX_API_KEY
+  - AIHUBMIX_KEY
+  regex:
+    pattern: (?i)(?:AIHUBMIX_API_KEY|AIHUBMIX_KEY)[\s'"=:]+([A-Za-z0-9_\-]{16,120})
+  entropy: 3.5
+
+- name: ohmygpt
+  keywords:
+  - OHMYGPT_API_KEY
+  - OHMYGPT_KEY
+  regex:
+    pattern: (?i)(?:OHMYGPT_API_KEY|OHMYGPT_KEY)[\s'"=:]+([A-Za-z0-9_\-]{16,120})
+  entropy: 3.5
+
+- name: openai_hk
+  keywords:
+  - OPENAI_HK_API_KEY
+  - CLOSEAI_API_KEY
+  - OPENAI_HK_KEY
+  regex:
+    pattern: (?i)(?:OPENAI_HK_API_KEY|CLOSEAI_API_KEY|OPENAI_HK_KEY)[\s'"=:]+([A-Za-z0-9_\-]{16,120})
+  entropy: 3.5
+- name: soax
+  keywords:
+  - s_live_
+  regex:
+    pattern: (?i)(s_live_[A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: oxylabs
+  keywords:
+  - OXYLABS_API_KEY
+  regex:
+    pattern: (?i)OXYLABS_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: oxylabs_dc
+  keywords:
+  - proxy.oxylabs.io
+  regex:
+    pattern: (?i)proxy\.oxylabs\.io/key/([a-f0-9]{32})
+  entropy: 3.5
+- name: decodo
+  keywords:
+  - DECODO_API_KEY
+  - SMARTPROXY_API_KEY
+  regex:
+    pattern: (?i)(?:DECODO|SMARTPROXY)_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: evomi
+  keywords:
+  - EVOMI_API_KEY
+  regex:
+    pattern: (?i)EVOMI_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: proxyscrape
+  keywords:
+  - PROXYSCRAPE_API_KEY
+  - PROXYSCRAPE_TOKEN
+  regex:
+    pattern: (?i)PROXYSCRAPE_(?:API_KEY|TOKEN)[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: proxyseller
+  keywords:
+  - PROXYSELLER_API_KEY
+  - PROXY_SELLER_API_KEY
+  regex:
+    pattern: (?i)PROXY_?SELLER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: proxy6
+  keywords:
+  - PROXY6_API_KEY
+  - PROXY_6_API_KEY
+  regex:
+    pattern: (?i)PROXY_?6_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: highproxies
+  keywords:
+  - HIGHPROXIES_API_KEY
+  regex:
+    pattern: (?i)HIGHPROXIES_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: proxytitan
+  keywords:
+  - PROXYTITAN_API_KEY
+  regex:
+    pattern: (?i)PROXYTITAN_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: byteful
+  keywords:
+  - BYTEFUL_PUBLIC_KEY
+  - BYTEFUL_PRIVATE_KEY
+  - BYTEFUL_API_KEY
+  regex:
+    pattern: (?i)BYTEFUL_(?:PUBLIC|PRIVATE|API)_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: marsproxies
+  keywords:
+  - MARSPROXIES_API_KEY
+  regex:
+    pattern: (?i)MARSPROXIES_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: nodemaven
+  keywords:
+  - NODEMAVEN_API_KEY
+  regex:
+    pattern: (?i)NODEMAVEN_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: proxycheap
+  keywords:
+  - PROXY_CHEAP_API_KEY
+  - PROXYCHEAP_API_KEY
+  regex:
+    pattern: (?i)PROXY_?CHEAP_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: rayobyte
+  keywords:
+  - RAYOBYTE_API_KEY
+  regex:
+    pattern: (?i)RAYOBYTE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{16,80})
+  entropy: 3.5
+- name: openai_bare
+  keywords:
+  - sk-proj-
+  - sk-svcacct-
+  - sk-admin-
+  regex:
+    pattern: (sk-(?:proj|svcacct|admin)-[A-Za-z0-9_\-]{40,260})
+  entropy: 3.5
+- name: abliteration
+  keywords:
+  - ABLITERATION_API_KEY
+  - ABLITERATION_KEY
+  - ABLIT_KEY
+  - abliteration_api_key
+  - ablit_key
+  regex:
+    pattern: (?i)(?:ABLITERATION_API_KEY|ABLITERATION_KEY|ABLIT_KEY)[\s'"=:]+([A-Za-z0-9_\-]{19,82})
+  entropy: 3.5
+- name: abliteration_ak_value
+  keywords:
+  - ak_
+  regex:
+    pattern: \b(ak_[A-Za-z0-9_]{43})\b
+  entropy: 2.5
+- name: venice_inference_key
+  keywords:
+  - VENICE_INFERENCE_KEY
+  - VENICE_API_KEY
+  - VENICE_KEY
+  - VENICE_INFERENCE
+  - venice_inference_key
+  - venice_api_key
+  regex:
+    pattern: (?i)(?:VENICE_INFERENCE_KEY|VENICE_API_KEY|VENICE_KEY)[\s'"=:]+([A-Za-z0-9_\-]{20,90})
+  entropy: 3.5
+- name: venice_inference_key_value
+  keywords:
+  - VENICE_INFERENCE_KEY_
+  regex:
+    pattern: (VENICE_INFERENCE_KEY_[A-Za-z0-9_\-]{40,46})
+  entropy: 2.5
+- name: minimax_cn_api_key
+  keywords:
+  - MINIMAX_CN_API_KEY
+  regex:
+    pattern: (?i)MINIMAX_CN_API_KEY[\s'"=:]+([A-Za-z0-9_\-\.]{19,260})
+  entropy: 3.5
+- name: huggingface_token_value
+  keywords:
+  - hf_
+  regex:
+    pattern: \b(hf_[A-Za-z0-9]{30,44})\b
+  entropy: 2.5
+- name: cloudflare_api_key
+  keywords:
+  - CLOUDFLARE_API_KEY
+  - CLOUDFLARE_GLOBAL_API_KEY
+  regex:
+    pattern: (?i)CLOUDFLARE_(?:GLOBAL_)?(?:API_)?KEY[\s'"=:]+([A-Za-z0-9_\-]{19,80})
+  entropy: 3.5
+- name: anthropic_oauth_token
+  keywords:
+  - ANTHROPIC_OAUTH_TOKEN
+  - CLAUDE_CODE_OAUTH_TOKEN
+  regex:
+    pattern: (?i)(?:ANTHROPIC_OAUTH_TOKEN|CLAUDE_CODE_OAUTH_TOKEN)[\s'"=:]+([A-Za-z0-9_\-\.]{20,300})
+  entropy: 3.5
+- name: anthropic_oauth_token_value
+  keywords:
+  - sk-ant-oat
+  regex:
+    pattern: \b(sk-ant-oat[0-9]{2}-[A-Za-z0-9_\-]{40,300})
+  entropy: 2.5
+- name: zai_api_key
+  keywords:
+  - ZAI_API_KEY
+  - ZAI_KEY
+  - GLM_API_KEY
+  - ZHIPU_API_KEY
+  - ZHIPUAI_API_KEY
+  regex:
+    pattern: (?i)(?:Z_?AI_(?:API_)?KEY|GLM_(?:CODING_)?API_KEY|ZHIPUAI?_API_KEY)[\s'"=:]+([A-Za-z0-9_\-\.]{20,120})
+  entropy: 3.5
+- name: copilot_github_token
+  keywords:
+  - COPILOT_GITHUB_TOKEN
+  - COPILOT_TOKEN
+  - COPILOT_API_KEY
+  regex:
+    pattern: (?i)COPILOT_(?:GITHUB_)?(?:TOKEN|API_KEY)[\s'"=:]+([A-Za-z0-9_\-\.]{20,120})
+  entropy: 3.5
+- name: aws_bearer_token_bedrock
+  keywords:
+  - AWS_BEARER_TOKEN_BEDROCK
+  - AWS_BEDROCK_API_KEY
+  - BEDROCK_API_KEY
+  regex:
+    pattern: (?i)(?:AWS_BEARER_TOKEN_BEDROCK|AWS_BEDROCK_API_KEY|BEDROCK_API_KEY)[\s'"=:]+([A-Za-z0-9_\-\.=+/]{20,400})
+  entropy: 3.5
+- name: google_cloud_api_key
+  keywords:
+  - GOOGLE_CLOUD_API_KEY
+  - GOOGLE_CLOUD_KEY
+  - GCLOUD_API_KEY
+  regex:
+    pattern: (?i)(?:GOOGLE_CLOUD|GCLOUD)_(?:API_)?KEY[\s'"=:]+([A-Za-z0-9_.\-]{30,60})
+  entropy: 3.5
+- name: anyscale
+  keywords:
+  - esecret_
+  - ANYSCALE_API_KEY
+  regex:
+    pattern: (esecret_[A-Za-z0-9]{30,80})
+  entropy: 3.5
+# 2026-10-20: ОТКЛЮЧЕНО — правило давало чистый шум. Паттерн `(K[0-9]{3}[A-Za-z0-9]{28,})`
+# ловит любой `K`+3 цифры+28 символов внутри base64/прокси-URI/рандома, а entropy 3.5 не
+# защищает, потому что длинные повторы её проходят. Итог: 1 325 748 строк (43 % базы),
+# ~43 000 новых в час, valid=1 — НОЛЬ за всю историю; в выборке «K00…» только заглушки вида
+# `K0000…0111111111222222` и блобы по 300 символов. Ключевое слово `K` вдобавок заставляло
+# trufflehog сканировать почти каждый файл.
+# Строгий вариант (включать, только если появится настоящий образец B2-ключа): требовать
+# контекст переменной и точную длину — 25 символов, только верхний регистр, без `ss://`/base64:
+# - name: backblaze
+#   keywords:
+#   - B2_APPLICATION_KEY
+#   - BACKBLAZE_APPLICATION_KEY
+#   - applicationKeyId
+#   regex:
+#     pattern: (?:B2_APPLICATION_KEY_ID|applicationKeyId)[\s'"=:]+(K00[0-9A-Za-z]{22})\b
+#   entropy: 4.0
+- name: bitcoin
+  keywords:
+  - BTC_PRIVATE_KEY
+  - BITCOIN_PRIVATE_KEY
+  - BTC_WIF
+  - BITCOIN_WIF
+  - btc
+  - bitcoin
+  - wif
+  regex:
+    pattern: (?i)(?:btc|bitcoin|wif)[_\s-]?(?:private[_\s-]?key|priv|secret|wif)["']?\s*[:=]\s*["']?([5KL][1-9A-HJ-NP-Za-km-z]{50,51})
+  entropy: 4.0
+- name: bitget
+  keywords:
+  - BITGET_API_KEY
+  - BITGET_SECRET
+  - BITGET_SECRET_KEY
+  - BITGET_PASSPHRASE
+  - BITGET_API_SECRET
+  - BITGET_API_PASSPHRASE
+  - bitget
+  regex:
+    pattern: (?i)(?:BITGET_API_KEY|BITGET_SECRET(?:_KEY)?|BITGET_PASSPHRASE|bitget[_\s-]?api[_\s-]?(?:key|secret|passphrase))["']?\s*[:=]\s*["']?([A-Za-z0-9]{30,80})
+  entropy: 3.0
+- name: coinbase
+  keywords:
+  - COINBASE_API_KEY
+  - COINBASE_API_SECRET
+  - coinbase
+  regex:
+    pattern: (?i)(?:COINBASE_API_KEY|coinbase[_\s-]?api[_\s-]?(?:key|secret))["']?\s*[:=]\s*["']?([A-Za-z0-9]{32,128})
+  entropy: 3.5
+- name: datadog
+  keywords:
+  - DATADOG_API_KEY
+  - DD_API_KEY
+  - datadog
+  regex:
+    pattern: (?i)(?:DATADOG_API_KEY|DD_API_KEY|datadog[_\s-]?api[_\s-]?key)["']?\s*[:=]\s*["']?([a-f0-9]{32})
+  entropy: 3.5
+- name: discord_webhook
+  keywords:
+  - https://discord.com/api/webhooks/
+  - https://discordapp.com/api/webhooks/
+  - DISCORD_WEBHOOK_URL
+  regex:
+    pattern: (https://discord(?:app)?\.com/api/webhooks/\d{17,19}/[A-Za-z0-9_-]{60,})
+  entropy: 3.0
+- name: eth_wallet_key
+  keywords:
+  - 0x
+  - PRIVATE_KEY
+  - PRIV_KEY
+  - WALLET_PRIVATE_KEY
+  - ETH_KEY
+  - WALLET_KEY
+  - SECRET_KEY
+  regex:
+    pattern: (?i)(?:private[_\s-]?key|priv[_\s-]?key|eth[_\s-]?key|wallet[_\s-]?key|secret[_\s-]?key|PRIVATE_KEY|PRIV_KEY|WALLET_PRIVATE_KEY)["']?\s*[:=]\s*["']?(0x[a-fA-F0-9]{64})
+  entropy: 4.0
+- name: gateio
+  keywords:
+  - GATE_API_KEY
+  - GATEIO_API_KEY
+  - GATE_SECRET
+  - GATE_SECRET_KEY
+  - GATEIO_SECRET
+  - GATEIO_SECRET_KEY
+  - GATE_API_SECRET
+  - gate
+  regex:
+    pattern: (?i)(?:GATE_API_KEY|GATEIO_API_KEY|GATE_SECRET(?:_KEY)?|GATEIO_SECRET(?:_KEY)?|gate[_\s-]?api[_\s-]?(?:key|secret))["']?\s*[:=]\s*["']?([A-Za-z0-9]{30,80})
+  entropy: 3.5
+- name: github_installation_token
+  keywords:
+  - ghs_
+  - GITHUB_TOKEN
+  - GH_TOKEN
+  regex:
+    pattern: (ghs_[A-Za-z0-9]{32,})
+  entropy: 3.5
+- name: github_oauth_token
+  keywords:
+  - gho_
+  - GITHUB_TOKEN
+  - GH_TOKEN
+  regex:
+    pattern: (gho_[A-Za-z0-9]{32,})
+  entropy: 3.5
+- name: github_personal_access_token
+  keywords:
+  - ghp_
+  - GITHUB_TOKEN
+  - GH_TOKEN
+  regex:
+    pattern: (ghp_[A-Za-z0-9]{32,})
+  entropy: 3.5
+- name: gitlab
+  keywords:
+  - glpat-
+  - GITLAB_TOKEN
+  - GITLAB_ACCESS_TOKEN
+  regex:
+    pattern: (glpat-[A-Za-z0-9_-]{18,})
+  entropy: 3.5
+- name: helicone
+  keywords:
+  - sk-helicone-
+  - HELICONE_API_KEY
+  regex:
+    pattern: (sk-helicone-[A-Za-z0-9-]{40,80})
+  entropy: 3.5
+- name: kucoin
+  keywords:
+  - KUCOIN_API_KEY
+  - KUCOIN_SECRET
+  - KUCOIN_SECRET_KEY
+  - KUCOIN_PASSPHRASE
+  - KUCOIN_API_SECRET
+  - KUCOIN_API_PASSPHRASE
+  - kucoin
+  regex:
+    pattern: (?i)(?:KUCOIN_API_KEY|KUCOIN_SECRET(?:_KEY)?|KUCOIN_PASSPHRASE|kucoin[_\s-]?api[_\s-]?(?:key|secret|passphrase))["']?\s*[:=]\s*["']?([A-Za-z0-9-]{20,80})
+  entropy: 3.0
+- name: mapbox
+  keywords:
+  - pk.eyJ
+  - MAPBOX_ACCESS_TOKEN
+  - MAPBOX_TOKEN
+  regex:
+    pattern: (pk\.eyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,})
+  entropy: 3.0
+- name: metamask_vault
+  keywords:
+  - '{"data":"'
+  - '"iv":"'
+  - '"salt":"'
+  regex:
+    pattern: (\{"data":"[A-Za-z0-9+/=]{200,1000}","iv":"[A-Za-z0-9+/=]{20,40}","salt":"[A-Za-z0-9+/=]{20,60}"\})
+  entropy: 3.0
+- name: modal
+  keywords:
+  - modal-prod-
+  - modal-dev-
+  - modal-main-
+  - MODAL_TOKEN_SECRET
+  regex:
+    pattern: (modal-(?:prod|dev|main)-[a-z0-9-]{30,80})
+  entropy: 3.5
+- name: newrelic_admin
+  keywords:
+  - NRAK-
+  - NEW_RELIC_API_KEY
+  - NEW_RELIC_USER_KEY
+  regex:
+    pattern: (NRAK-[A-Z0-9]{27})
+  entropy: 3.5
+- name: newrelic_insert
+  keywords:
+  - NRII-
+  - NEW_RELIC_INSERT_KEY
+  regex:
+    pattern: (NRII-[A-Za-z0-9]{32})
+  entropy: 3.5
+- name: paddle
+  keywords:
+  - pdl_
+  - PADDLE_API_KEY
+  regex:
+    pattern: (pdl_[a-z]{2}_[A-Za-z0-9_-]{60,200})
+  entropy: 3.5
+- name: paypal
+  keywords:
+  - access_token$production$
+  - access_token$sandbox$
+  - PAYPAL_ACCESS_TOKEN
+  regex:
+    pattern: (access_token\$(?:production|sandbox)\$[A-Za-z0-9._-]{60,300})
+  entropy: 3.5
+- name: pinecone
+  keywords:
+  - PINECONE_API_KEY
+  - pinecone
+  regex:
+    pattern: (?i)(?:PINECONE_API_KEY|pinecone[_\s-]?api[_\s-]?key)["']?\s*[:=]\s*["']?([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})
+  entropy: 3.0
+- name: postmark
+  keywords:
+  - POSTMARK_
+  - POSTMARK_SERVER_TOKEN
+  - POSTMARK_API_TOKEN
+  regex:
+    pattern: (POSTMARK_[A-Za-z0-9_-]{36,50})
+  entropy: 3.5
+- name: sentry_dsn
+  keywords:
+  - sentry.io
+  - SENTRY_DSN
+  regex:
+    pattern: (https://[^@\s]+@(?:o\d+\.ingest\.(?:us\.|de\.)?)?sentry\.io/\d+)
+  entropy: 3.0
+- name: shopify
+  keywords:
+  - shpat_
+  - shpss_
+  - shpca_
+  - SHOPIFY_ACCESS_TOKEN
+  - SHOPIFY_API_SECRET
+  regex:
+    pattern: (shp(?:at|ss|ca)_[A-Za-z0-9]{32,})
+  entropy: 3.5
+- name: slack_webhook
+  keywords:
+  - https://hooks.slack.com/services/
+  - SLACK_WEBHOOK_URL
+  regex:
+    pattern: (https://hooks\.slack\.com/services/T[A-Za-z0-9_-]+/B[A-Za-z0-9_-]+/[A-Za-z0-9_-]{24,})
+  entropy: 3.0
+- name: solana
+  keywords:
+  - SOLANA_PRIVATE_KEY
+  - SOL_PRIVATE_KEY
+  - SOLANA_SECRET_KEY
+  - SOL_SECRET_KEY
+  - PHANTOM_PRIVATE_KEY
+  - PHANTOM_SECRET_KEY
+  - solana
+  - sol
+  - phantom
+  regex:
+    pattern: (?i)(?:solana|sol|phantom)[_\s-]?(?:private[_\s-]?key|secret[_\s-]?key|secret)["']?\s*[:=]\s*["']?([1-9A-HJ-NP-Za-km-z]{87,88})
+  entropy: 4.0
+- name: solana_array
+  keywords:
+  - SOLANA_PRIVATE_KEY
+  - SOL_PRIVATE_KEY
+  - PHANTOM_SECRET
+  - PHANTOM_PRIVATE_KEY
+  - phantom
+  regex:
+    pattern: (?i)(?:SOLANA_PRIVATE_KEY|SOL_PRIVATE_KEY|phantom[_\s-]?secret|phantom[_\s-]?private[_\s-]?key)["']?\s*[:=]\s*\[((?:\s*\d{1,3}\s*,){63}\s*\d{1,3}\s*)\]
+  entropy: 2.5
+- name: square_access_token
+  keywords:
+  - EAAAE
+  - SQUARE_ACCESS_TOKEN
+  regex:
+    pattern: (EAAAE[A-Za-z0-9_-]{50,200})
+  entropy: 3.5
+- name: square_oauth_token
+  keywords:
+  - sq0
+  - SQUARE_ACCESS_TOKEN
+  - SQUARE_APPLICATION_SECRET
+  regex:
+    pattern: (sq0[a-z]{3}-[A-Za-z0-9_-]{22,50})
+  entropy: 3.5
+- name: ton_wallet
+  keywords:
+  - TON_MNEMONIC
+  - TON_SEED
+  - TON_SECRET_KEY
+  - ton
+  regex:
+    pattern: (?i)(?:TON_MNEMONIC|TON_SEED|ton[_\s-]?(?:mnemonic|seed|secret[_\s-]?key))["']?\s*[:=]\s*["']?((?:\b[a-z]{3,8}\b[\s\x{00A0}]+){23}\b[a-z]{3,8}\b)
+  entropy: 2.5
+- name: tron
+  keywords:
+  - TRON_PRIVATE_KEY
+  - tron
+  regex:
+    pattern: (?i)(?:TRON_PRIVATE_KEY|tron[_\s-]?private[_\s-]?key)["']?\s*[:=]\s*["']?([A-Fa-f0-9]{64})
+  entropy: 4.0
+- name: deepinfra
+  keywords:
+  - DEEPINFRA_TOKEN
+  - DEEPINFRA_API_KEY
+  - deepinfra
+  regex:
+    pattern: (?i)(?:DEEPINFRA_TOKEN|DEEPINFRA_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?([A-Za-z0-9][A-Za-z0-9._-]{24,80})['\"]?
+  entropy: 3.5
+- name: bip39_seed
+  keywords:
+  - MNEMONIC
+  - SEED_PHRASE
+  - SEEDPHRASE
+  - RECOVERY_PHRASE
+  - WALLET_SEED
+  - BACKUP_PHRASE
+  regex:
+    pattern: (?i)(?:mnemonic|seed[_\s-]?phrase|seedphrase|recovery[_\s-]?phrase|wallet[_\s-]?seed|backup[_\s-]?phrase|MNEMONIC|SEED_PHRASE)["']?\s*[:=]\s*["']?((?:\b[a-z]{3,8}\b[\s\x{00A0}]+){11,23}\b[a-z]{3,8}\b)
+  entropy: 2.5
+
+# --- oh-my-pi catalog providers (scripts/build_omp_catalog.py, data/omp_catalog.json) ---
+- name: meta
+  keywords:
+  - MODEL_API_KEY
+  - META_API_KEY
+  regex:
+    pattern: (?i)(?:MODEL_API_KEY|META_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?([A-Za-z0-9][A-Za-z0-9._-]{23,})['\"]?
+  entropy: 3.5
+- name: qwen_portal
+  keywords:
+  - QWEN_OAUTH_TOKEN
+  - QWEN_PORTAL_API_KEY
+  regex:
+    pattern: (?i)(?:QWEN_OAUTH_TOKEN|QWEN_PORTAL_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?((?:sk-[A-Za-z0-9._-]{20,}|eyJ[A-Za-z0-9._-]{10,}\.[A-Za-z0-9._-]{10,}\.[A-Za-z0-9._-]{10,}))['\"]?
+  entropy: 3.5
+- name: vercel_ai_gateway
+  keywords:
+  - AI_GATEWAY_API_KEY
+  - VERCEL_AI_GATEWAY_API_KEY
+  regex:
+    pattern: (?i)(?:AI_GATEWAY_API_KEY|VERCEL_AI_GATEWAY_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(vck_[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: opencode
+  keywords:
+  - OPENCODE_API_KEY
+  regex:
+    pattern: (?i)(?:OPENCODE_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: aiand
+  keywords:
+  - AIAND_API_KEY
+  regex:
+    pattern: (?i)(?:AIAND_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: aimlapi
+  keywords:
+  - AIMLAPI_API_KEY
+  regex:
+    pattern: (?i)(?:AIMLAPI_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?([A-Za-z0-9][A-Za-z0-9._-]{23,})['\"]?
+  entropy: 3.5
+- name: baseten
+  keywords:
+  - BASETEN_API_KEY
+  regex:
+    pattern: (?i)(?:BASETEN_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(bt_[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: charm_hyper
+  keywords:
+  - CHARM_HYPER_API_KEY
+  - HYPER_API_KEY
+  regex:
+    pattern: (?i)(?:CHARM_HYPER_API_KEY|HYPER_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-hyper-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: cline_pass
+  keywords:
+  - CLINE_API_KEY
+  regex:
+    pattern: (?i)(?:CLINE_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk_[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: commandcode
+  keywords:
+  - COMMAND_CODE_API_KEY
+  - COMMANDCODE_API_KEY
+  regex:
+    pattern: (?i)(?:COMMAND_CODE_API_KEY|COMMANDCODE_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(user_[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: coralbricks
+  keywords:
+  - CORAL_API_KEY
+  - CORALBRICKS_API_KEY
+  regex:
+    pattern: (?i)(?:CORAL_API_KEY|CORALBRICKS_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(cb_[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: coreweave
+  keywords:
+  - COREWEAVE_API_KEY
+  regex:
+    pattern: (?i)(?:COREWEAVE_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?([A-Za-z0-9][A-Za-z0-9._-]{23,})['\"]?
+  entropy: 3.5
+- name: firepass
+  keywords:
+  - FIREPASS_API_KEY
+  regex:
+    pattern: (?i)(?:FIREPASS_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(fpk_[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: gmi_cloud
+  keywords:
+  - GMI_API_KEY
+  regex:
+    pattern: (?i)(?:GMI_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(eyJ[A-Za-z0-9._-]{10,}\.[A-Za-z0-9._-]{10,}\.[A-Za-z0-9._-]{10,})['\"]?
+  entropy: 3.5
+- name: helmcode
+  keywords:
+  - HELMCODE_API_KEY
+  regex:
+    pattern: (?i)(?:HELMCODE_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: minimax_code
+  keywords:
+  - MINIMAX_CODE_API_KEY
+  regex:
+    pattern: (?i)(?:MINIMAX_CODE_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: minimax_code_cn
+  keywords:
+  - MINIMAX_CODE_CN_API_KEY
+  regex:
+    pattern: (?i)(?:MINIMAX_CODE_CN_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: nanogpt
+  keywords:
+  - NANO_GPT_API_KEY
+  regex:
+    pattern: (?i)(?:NANO_GPT_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: ollama_cloud
+  keywords:
+  - OLLAMA_CLOUD_API_KEY
+  regex:
+    pattern: (?i)(?:OLLAMA_CLOUD_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?([A-Za-z0-9][A-Za-z0-9._-]{23,})['\"]?
+  entropy: 3.5
+- name: sakana
+  keywords:
+  - SAKANA_API_KEY
+  - FUGU_API_KEY
+  regex:
+    pattern: (?i)(?:SAKANA_API_KEY|FUGU_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: siliconflow_cn
+  keywords:
+  - SILICONFLOW_CN_API_KEY
+  regex:
+    pattern: (?i)(?:SILICONFLOW_CN_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: singularityapi_dev
+  keywords:
+  - SINGULARITYAPI_DEV_API_KEY
+  regex:
+    pattern: (?i)(?:SINGULARITYAPI_DEV_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-sapi-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: singularityapi_tech
+  keywords:
+  - SINGULARITYAPI_TECH_API_KEY
+  regex:
+    pattern: (?i)(?:SINGULARITYAPI_TECH_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: stepfun
+  keywords:
+  - STEPFUN_API_KEY
+  regex:
+    pattern: (?i)(?:STEPFUN_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?([A-Za-z0-9][A-Za-z0-9._-]{23,})['\"]?
+  entropy: 3.5
+- name: synthetic
+  keywords:
+  - SYNTHETIC_API_KEY
+  regex:
+    pattern: (?i)(?:SYNTHETIC_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: typesafe
+  keywords:
+  - TYPESAFE_API_KEY
+  regex:
+    pattern: (?i)(?:TYPESAFE_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?([A-Za-z0-9][A-Za-z0-9._-]{23,})['\"]?
+  entropy: 3.5
+- name: umans
+  keywords:
+  - UMANS_AI_CODING_PLAN_API_KEY
+  regex:
+    pattern: (?i)(?:UMANS_AI_CODING_PLAN_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: wafer_serverless
+  keywords:
+  - WAFER_SERVERLESS_API_KEY
+  regex:
+    pattern: (?i)(?:WAFER_SERVERLESS_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(wfr_[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: xiaomi_token_plan_ams
+  keywords:
+  - XIAOMI_TOKEN_PLAN_AMS_API_KEY
+  regex:
+    pattern: (?i)(?:XIAOMI_TOKEN_PLAN_AMS_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(tp-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: xiaomi_token_plan_cn
+  keywords:
+  - XIAOMI_TOKEN_PLAN_CN_API_KEY
+  regex:
+    pattern: (?i)(?:XIAOMI_TOKEN_PLAN_CN_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(tp-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: xiaomi_token_plan_sgp
+  keywords:
+  - XIAOMI_TOKEN_PLAN_SGP_API_KEY
+  regex:
+    pattern: (?i)(?:XIAOMI_TOKEN_PLAN_SGP_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(tp-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: yolo_auto
+  keywords:
+  - YOLO_AUTO_API_KEY
+  regex:
+    pattern: (?i)(?:YOLO_AUTO_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(yolo_[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: zenmux
+  keywords:
+  - ZENMUX_API_KEY
+  regex:
+    pattern: (?i)(?:ZENMUX_API_KEY)[^\n=:]{0,12}[=:]\s*['\"]?(sk-[A-Za-z0-9._-]{20,})['\"]?
+  entropy: 3.5
+- name: google_api_key_value
+  keywords:
+  - AIzaSy
+  regex:
+    pattern: (AIzaSy[0-9A-Za-z_\-]{33,38})
+  entropy: 3.5
+- name: google_api_key_v2
+  keywords:
+  - AQ.Ab8
+  - AQ.Er5
+  regex:
+    pattern: (AQ\.[0-9A-Za-z_\-]{40,64})
+  entropy: 3.5
+- name: zai
+  keywords:
+  - ZAI_API_KEY
+  - ZHIPU_API_KEY
+  regex:
+    pattern: (?i)(?:ZAI_API_KEY|ZHIPU_API_KEY)[^\n=:]{0,12}[=:]\s*['"]?([A-Za-z0-9._-]{20,80})['"]?
+  entropy: 3.5
+- name: zai_coding_plan
+  keywords:
+  - ZAI_CODING_API_KEY
+  regex:
+    pattern: (?i)(?:ZAI_CODING_API_KEY)[^\n=:]{0,12}[=:]\s*['"]?([A-Za-z0-9._-]{20,80})['"]?
+  entropy: 3.5
+- name: venice
+  keywords:
+  - VENICE_API_KEY
+  - VENICE_INFERENCE
+  regex:
+    pattern: (?i)(?:VENICE_API_KEY|VENICE_INFERENCE_API_KEY)[^\n=:]{0,12}[=:]\s*['"]?([A-Za-z0-9._-]{20,80})['"]?
+  entropy: 3.5
+- name: assemblyai
+  keywords:
+  - ASSEMBLYAI_API_KEY
+  regex:
+    pattern: (?i)(?:ASSEMBLYAI_API_KEY)[^\n=:]{0,12}[=:]\s*['"]?([a-f0-9]{32})['"]?
+  entropy: 3.0
+- name: moonshot
+  keywords:
+  - MOONSHOT_API_KEY
+  regex:
+    pattern: (?i)(?:MOONSHOT_API_KEY)[^\n=:]{0,12}[=:]\s*['"]?(sk-[A-Za-z0-9]{40,80})['"]?
+  entropy: 3.5
+- name: google_cse_cx
+  keywords:
+  - GOOGLE_CSE_CX
+  - GOOGLE_CX
+  - CUSTOM_SEARCH_CX
+  - CSE_ID
+  - SEARCH_ENGINE_ID
+  regex:
+    pattern: (?i)(?:GOOGLE_CSE_CX|GOOGLE_CX|CUSTOM_SEARCH_CX|CSE_ID|SEARCH_ENGINE_ID)[\s'\"=:]+([0-9]{16,21}:[a-z0-9_\-]{8,25})
+  entropy: 3.0
+- name: nvd
+  keywords:
+  - NVD_API_KEY
+  - NVDAPIKEY
+  - NVD_KEY
+  regex:
+    pattern: (?i)(?:NVD_API_KEY|NVDAPIKEY|NVD_KEY)[\s'\"=:]+([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})
+  entropy: 3.0
+- name: vulners
+  keywords:
+  - VULNERS_API_KEY
+  - VULNERS_KEY
+  - VULNERS_TOKEN
+  regex:
+    pattern: (?i)(?:VULNERS_API_KEY|VULNERS_KEY|VULNERS_TOKEN)[\s'\"=:]+([A-Za-z0-9_\-]{18,80})
+  entropy: 3.5
+- name: viewdns
+  keywords:
+  - VIEWDNS_API_KEY
+  - VIEWDNS_KEY
+  - VIEWDNS_TOKEN
+  regex:
+    pattern: (?i)(?:VIEWDNS_API_KEY|VIEWDNS_KEY|VIEWDNS_TOKEN)[\s'\"=:]+([A-Za-z0-9_\-]{18,64})
+  entropy: 3.5
+- name: driftnet
+  keywords:
+  - DRIFTNET_API_KEY
+  - DRIFTNET_TOKEN
+  - DRIFTNET_KEY
+  regex:
+    pattern: (?i)(?:DRIFTNET_API_KEY|DRIFTNET_TOKEN|DRIFTNET_KEY)[\s'\"=:]+([A-Za-z0-9_\-]{18,90})
+  entropy: 3.5
+- name: wpscan
+  keywords:
+  - WPSCAN_API_TOKEN
+  - WPSCAN_API_KEY
+  - WPSCAN_TOKEN
+  regex:
+    pattern: (?i)(?:WPSCAN_API_TOKEN|WPSCAN_API_KEY|WPSCAN_TOKEN)[\s'\"=:]+([A-Za-z0-9_\-]{18,64})
+  entropy: 3.5
+- name: censys_pat
+  keywords:
+  - CENSYS_API_TOKEN
+  - CENSYS_PAT
+  - CENSYS_TOKEN
+  regex:
+    pattern: (censys_[A-Za-z0-9_\-]{16,120})
+  entropy: 3.0
+- name: qianxin_hunter
+  keywords:
+  - QIANXIN_HUNTER_API_KEY
+  - HUNTER_QIANXIN_API_KEY
+  - QIANXIN_API_KEY
+  - QIANXIN_TOKEN
+  regex:
+    pattern: (?i)(?:QIANXIN_HUNTER_API_KEY|HUNTER_QIANXIN_API_KEY|QIANXIN_API_KEY|QIANXIN_TOKEN)[\s'\"=:]+([A-Za-z0-9_\-]{16,64})
+  entropy: 3.0
+- name: poe
+  keywords:
+  - POE_API_KEY
+  - poe_api_key
+  regex:
+    pattern: (?i)POE_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{32,128})
+  entropy: 3.5
+- name: requesty
+  keywords:
+  - REQUESTY_API_KEY
+  - requesty_api_key
+  regex:
+    pattern: (?i)REQUESTY_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,128})
+  entropy: 3.5
+- name: kilo
+  keywords:
+  - KILO_API_KEY
+  - kilocode
+  regex:
+    pattern: (?i)(?:KILO_API_KEY|KILOCODE_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{30,128})
+  entropy: 3.5
+- name: bothub
+  keywords:
+  - BOTHUB_API_KEY
+  - bothub
+  regex:
+    pattern: (?i)BOTHUB_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,128})
+  entropy: 3.5
+- name: nebius
+  keywords:
+  - NEBIUS_API_KEY
+  - nebius
+  regex:
+    pattern: (?i)NEBIUS_API_KEY[\s'"=:]+([A-Za-z0-9_\-.]{30,160})
+  entropy: 3.5
+- name: chutes
+  keywords:
+  - cpk_
+  - CHUTES_API_KEY
+  regex:
+    pattern: (?:cpk_[A-Za-z0-9]{30,})|(?i)(?:CHUTES_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{30,128})
+  entropy: 3.5
+- name: hyperbolic
+  keywords:
+  - HYPERBOLIC_API_KEY
+  - hyperbolic
+  regex:
+    pattern: (?i)HYPERBOLIC_API_KEY[\s'"=:]+([A-Za-z0-9_\-.]{30,200})
+  entropy: 3.5
+- name: fastrouter
+  keywords:
+  - FASTROUTER_API_KEY
+  - fastrouter
+  regex:
+    pattern: (?i)FASTROUTER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,128})
+  entropy: 3.5
+- name: abacus
+  keywords:
+  - ABACUS_API_KEY
+  - abacusai
+  regex:
+    pattern: (?i)(?:ABACUS_API_KEY|ABACUSAI_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{30,128})
+  entropy: 3.5
+- name: llmgateway
+  keywords:
+  - LLMGATEWAY_API_KEY
+  - LLM_GATEWAY
+  regex:
+    pattern: (?i)(?:LLMGATEWAY_API_KEY|LLM_GATEWAY_API_KEY)[\s'"=:]+([A-Za-z0-9_\-]{30,128})
+  entropy: 3.5
+- name: parasail
+  keywords:
+  - PARASAIL_API_KEY
+  - parasail
+  regex:
+    pattern: (?i)PARASAIL_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,128})
+  entropy: 3.5
+- name: orcarouter
+  keywords:
+  - ORCAROUTER_API_KEY
+  - orcarouter
+  regex:
+    pattern: (?i)ORCAROUTER_API_KEY[\s'"=:]+([A-Za-z0-9_\-]{30,128})
+  entropy: 3.5
